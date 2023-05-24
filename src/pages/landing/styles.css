@@ -1,0 +1,235 @@
+.landing-container {
+    overflow-x: hidden;
+    height: 200vh;
+}
+
+.showcase {
+    padding: 32px 20px;
+    display: flex;
+    position: relative;
+}
+
+.showcase button {
+    font-family: 'Inter';
+    color: #0093CE;
+    letter-spacing: 2px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all ease 0.2s;
+}
+
+.showcase button:hover {
+    background-color: #f0eeee;
+}
+
+.login-button {
+    position: absolute;
+    top: 20px;
+    right: 22px;
+    font-size: 14px;
+    z-index: 2;
+    background-color: #FBFBFB;
+}
+
+.login-button,
+.sign-up-button {
+    padding: 5px 27px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.showcase-logo {
+    transform: translateX(-10px);
+    width: 150%;
+}
+
+.showcase-description {
+    width: 50%;
+    z-index: 2;
+    max-width: 290px;
+}
+
+.showcase-description-text {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+    position: relative;
+    margin-top: 20px;
+}
+
+.showcase-blue-bar {
+    min-width: 8px;
+    background-color: #0093CE;
+}
+
+.showcase-description-text p {
+    font-size: 12px;
+    font-weight: 600;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.showcase-description-text span {
+    color: #0093CE;
+}
+
+.showcase-images {
+    position: relative;
+    top: 0;
+    right: 0;
+}
+
+.sc-wolf-img,
+.sc-orange-img,
+.sc-blue-img {
+    position: absolute;
+}
+
+.sc-wolf-img {
+    right: -50vw;
+    width: 65vw;
+    top: 20%;
+    z-index: 3;
+}
+
+.sc-blue-img {
+    width: 270px;
+    top: -25%;
+    right: -87vw;
+    transform: rotate(110deg);
+    z-index: 1;
+}
+
+.sc-orange-img {
+    width: 270px;
+    right: -65vw;
+    transform: rotate(360deg);
+}
+
+.sign-up-wrapper {
+    position: absolute;
+    bottom: -5%;
+    right: 50%;
+    transform: translateX(50%);
+    width: 270px;
+    border-radius: 10px;
+    z-index: 4;
+}
+
+.sign-up-button {
+    font-size: 16px;
+    background-color: transparent;
+}
+
+@media(min-width: 567px) {
+    .showcase-logo {
+        width: 135%;
+    }
+
+    .sc-wolf-img {
+        width: 340px;
+    }
+
+    .sc-blue-img {
+        width: 290px;
+        top: -35%;
+        right: -70vw;
+    }
+
+    .sc-orange-img {
+        width: 300px;
+    }
+}
+
+@media(min-width: 768px) {
+    .showcase {
+        padding: 32px 42px;
+    }
+
+    .showcase-logo {
+        width: 340px;
+    }
+
+    .sc-orange-img {
+        right: -55vw;
+    }
+
+    .sc-blue-img {
+        top: -45%;
+        right: -65vw;
+    }
+}
+
+@media(min-width: 992px) {
+    .showcase {
+        height: 100vh;
+        padding: 42px 52px 42px 52px;
+    }
+
+    .login-button {
+        font-size: 1.05rem;
+        padding: 6px 27px;
+        backdrop-filter: blur(20px);
+    }
+
+    .showcase-description {
+        max-width: unset;
+        align-self: center;
+        transform:  translateY(-8vh);
+    }
+
+    .showcase-logo {
+        width: 75%;
+        transform: translateX(2vw);
+    }
+
+    .showcase-description-text {
+        gap: 22px;
+        width: 80%;
+    }
+
+    .showcase-description-text p {
+        font-size: 0.9rem;
+    }
+
+    .sc-wolf-img {
+        width: unset;
+        height: 80vh;
+        top: 5vh;
+        right: -38vw;
+    }
+
+    .sc-blue-img,
+    .sc-orange-img {
+        transform: rotate(0);
+        height: 100vh;
+    }
+
+    .sc-blue-img {
+        top: -10%;
+        right: -30vw;
+        width: 30vw;
+    }
+
+    .sc-orange-img {
+        top: -5%;
+        width: 25vw;
+        right: -50vw;
+    }
+
+    .sign-up-wrapper {
+        bottom: 12%;
+        width: unset;
+    }
+
+    .sign-up-button {
+        font-size: 1.4rem;
+        padding: 13px 27px;
+        font-weight: 700;
+        z-index: 4;
+        backdrop-filter: blur(20px);
+        background: rgba(251, 251, 251, 0.5);
+        border-radius: 18px;
+    }
+}
