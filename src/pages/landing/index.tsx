@@ -1,7 +1,7 @@
-import logo from "../../assets/common/logo.svg";
-import showcaseWolf from "../../assets/landing/showcase-wolf.svg";
-import showcaseBlueVector from "../../assets/landing/showcase-blue.svg";
-import showcaseOrangeVector from "../../assets/landing/showcase-orange.svg";
+import { ReactComponent as Logo } from "../../assets/common/logo.svg";
+import { ReactComponent as WolfVector } from "../../assets/landing/showcase-wolf.svg";
+import { ReactComponent as BlueVector } from "../../assets/landing/showcase-blue.svg";
+import { ReactComponent as OrangeVector } from "../../assets/landing/showcase-orange.svg";
 import "./styles.css";
 
 function Landing() {
@@ -11,7 +11,7 @@ function Landing() {
         <button className="login-button">Login</button>
 
         <div className="showcase-description">
-          <img className="showcase-logo" src={logo} alt="logo" />
+          <Logo className="showcase-logo" />
 
           <div className="showcase-description-text">
             <div className="showcase-blue-bar" />
@@ -28,23 +28,11 @@ function Landing() {
         </div>
 
         <div className="showcase-images">
-          <img
-            className="sc-wolf-img"
-            src={showcaseWolf}
-            alt="wolf character"
-          />
+          <WolfVector className="sc-wolf-img" />
 
-          <img
-            className="sc-blue-img"
-            src={showcaseBlueVector}
-            alt="blue vector"
-          />
+          <BlueVector className="sc-blue-img" />
 
-          <img
-            className="sc-orange-img"
-            src={showcaseOrangeVector}
-            alt="orange vector"
-          />
+          <OrangeVector className="sc-orange-img" />
         </div>
 
         <div className="sign-up-wrapper">

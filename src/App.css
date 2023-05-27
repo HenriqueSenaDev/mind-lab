@@ -10,8 +10,21 @@ body {
   font-family: 'Inter';
 }
 
+:root {
+  --primary-color: #0093CE;
+  --secondary-color: #F3701F;
+}
+
 .flex-center {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.primary-color {
+  fill: var(--primary-color);
+}
+
+.secondary-color {
+  fill: var(--secondary-color);
 }

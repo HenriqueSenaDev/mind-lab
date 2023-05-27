@@ -11,7 +11,7 @@
 
 .showcase button {
     font-family: 'Inter';
-    color: #0093CE;
+    color: var(--primary-color);
     letter-spacing: 2px;
     outline: none;
     border: none;
@@ -60,7 +60,7 @@
 
 .showcase-blue-bar {
     min-width: 8px;
-    background-color: #0093CE;
+    background-color: var(--primary-color);
 }
 
 .showcase-description-text p {
@@ -71,7 +71,7 @@
 }
 
 .showcase-description-text span {
-    color: #0093CE;
+    color: var(--primary-color);
 }
 
 .showcase-images {
@@ -89,14 +89,14 @@
 .sc-wolf-img {
     right: -50vw;
     width: 65vw;
-    top: 20%;
+    top: -45%;
     z-index: 3;
 }
 
 .sc-blue-img {
     width: 270px;
-    top: -25%;
-    right: -87vw;
+    top: -85%;
+    right: -82vw;
     transform: rotate(110deg);
     z-index: 1;
 }
@@ -104,6 +104,7 @@
 .sc-orange-img {
     width: 270px;
     right: -65vw;
+    top: -55%;
     transform: rotate(360deg);
 }
 
@@ -123,22 +124,31 @@
 }
 
 @media(min-width: 567px) {
+    .showcase {
+        padding: 32px 28px;
+    }
+
     .showcase-logo {
-        width: 135%;
+        width: 125%;
     }
 
     .sc-wolf-img {
-        width: 340px;
+        width: 310px;
     }
 
     .sc-blue-img {
         width: 290px;
-        top: -35%;
-        right: -70vw;
+        top: -100%;
+        right: -68vw;
     }
 
     .sc-orange-img {
         width: 300px;
+        right: -62vw;
+    }
+
+    .sign-up-wrapper {
+        bottom: -18%;
     }
 }
 
@@ -151,13 +161,24 @@
         width: 340px;
     }
 
+    .showcase-description-text p {
+        font-size: 14px;
+    }
+
     .sc-orange-img {
         right: -55vw;
+        width: 340px;
+        top: -60%;
     }
 
     .sc-blue-img {
-        top: -45%;
-        right: -65vw;
+        width: 340px;
+        top: -100%;
+        right: -68vw;
+    }
+
+    .sign-up-wrapper {
+        bottom: -12%;
     }
 }
 
@@ -176,7 +197,7 @@
     .showcase-description {
         max-width: unset;
         align-self: center;
-        transform:  translateY(-8vh);
+        transform: translateY(-8vh);
     }
 
     .showcase-logo {
@@ -190,14 +211,14 @@
     }
 
     .showcase-description-text p {
-        font-size: 0.9rem;
+        font-size: 15px;
     }
 
     .sc-wolf-img {
         width: unset;
         height: 80vh;
         top: 5vh;
-        right: -38vw;
+        right: -36vw;
     }
 
     .sc-blue-img,
@@ -215,7 +236,7 @@
     .sc-orange-img {
         top: -5%;
         width: 25vw;
-        right: -50vw;
+        right: -48vw;
     }
 
     .sign-up-wrapper {
