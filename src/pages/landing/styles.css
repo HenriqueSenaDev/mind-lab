@@ -1,12 +1,13 @@
 .landing-container {
     overflow-x: hidden;
-    height: 200vh;
+    height: 300vh;
 }
 
 .showcase {
     padding: 32px 20px;
     display: flex;
     position: relative;
+    margin-bottom: 15%;
 }
 
 .showcase button {
@@ -121,11 +122,52 @@
 .sign-up-button {
     font-size: 16px;
     background-color: transparent;
+    font-weight: 700;
+}
+
+.our-courses {
+    position: relative;
+    display: flex;
+    justify-content: end;
+}
+
+.courses-wolf-img {
+    position: absolute;
+    width: 50%;
+    left: 0;
+    top: -50%;
+}
+
+.courses-area {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+    transform: translateY(4vh);
+    position: relative;
+}
+
+.courses-cards {
+    transform: translateX(3vw);
+}
+
+.courses-right-arrow,
+.courses-left-arrow {
+    position: absolute;
+    top: 30%;
+    right: -28%;
+}
+
+.courses-left-arrow {
+    left: -28%;
+    transform: scaleX(-1);
 }
 
 @media(min-width: 567px) {
     .showcase {
         padding: 32px 28px;
+        margin-bottom: 18%;
     }
 
     .showcase-logo {
@@ -149,6 +191,25 @@
 
     .sign-up-wrapper {
         bottom: -18%;
+    }
+
+    .courses-area {
+        width: 75%;
+        gap: 32px;
+    }
+
+    .courses-cards {
+        transform: unset;
+    }
+
+    .courses-right-arrow {
+        right: 15%;
+        top: 50%;
+    }
+
+    .courses-left-arrow {
+        left: 15%;
+        top: 50%;
     }
 }
 
@@ -180,12 +241,27 @@
     .sign-up-wrapper {
         bottom: -12%;
     }
+
+    .courses-wolf-img {
+        transform: scale(1.4);
+        left: 10%;
+    }
+
+    .courses-area {
+        gap: 52px;
+        transform: unset;
+    }
+
+    .courses-label-img {
+        transform: scale(1.4);
+    }
 }
 
 @media(min-width: 992px) {
     .showcase {
         height: 100vh;
         padding: 42px 52px 42px 52px;
+        margin-bottom: 0;
     }
 
     .login-button {
@@ -247,10 +323,21 @@
     .sign-up-button {
         font-size: 1.4rem;
         padding: 13px 27px;
-        font-weight: 700;
         z-index: 4;
         backdrop-filter: blur(20px);
         background: rgba(251, 251, 251, 0.5);
         border-radius: 18px;
+    }
+
+    .courses-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 40px;
+    }
+
+    .courses-wolf-img {
+        transform: scale(1.7);
+        left: 16%;
+        top: -10%;
     }
 }

@@ -15,6 +15,8 @@ body {
 :root {
   --primary-color: #0093CE;
   --secondary-color: #F3701F;
+  /* --primary-color: purple;
+  --secondary-color: orange; */
 }
 
 .flex-center {
