@@ -10,7 +10,7 @@
 </mask>
 <g mask="url(#mask0_292_238)">
 <g style="mix-blend-mode:multiply">
-<rect x="305.67" y="224.82" width="376.915" height="222.145" class="secondary-color"/>
+<rect x="305.67" y="224.82" width="376.915" height="222.145" fill="#F3701F"/>
 </g>
 </g>
 <mask id="mask1_292_238" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="296" y="229" width="399" height="361">
@@ -18,7 +18,7 @@
 </mask>
 <g mask="url(#mask1_292_238)">
 <g style="mix-blend-mode:multiply">
-<rect x="296.43" y="229.055" width="398.09" height="360.745" class="primary-color"/>
+<rect x="296.43" y="229.055" width="398.09" height="360.745" fill="#0093CE"/>
 </g>
 </g>
 <g style="mix-blend-mode:screen">
