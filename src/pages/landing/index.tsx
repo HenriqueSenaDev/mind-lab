@@ -11,7 +11,7 @@ import CourseCard from "./components/course-card";
 import MultimodalItem from "./components/multimodal-item";
 import "./styles.css";
 
-// Course cards assets
+// Our Courses section assets
 import multimodalWolfImg from "../../assets/landing/multimodals.png";
 import planning from "../../assets/landing/courses/planning.png";
 import design from "../../assets/landing/courses/design.png";
@@ -21,7 +21,7 @@ import backend from "../../assets/landing/courses/backend.png";
 import pixelArt from "../../assets/landing/courses/pixel-art.png";
 import scratch from "../../assets/landing/courses/scratch.png";
 import cientificMetodology from "../../assets/landing/courses/cientific-metodology.png";
-// Multimodal assets
+// Multimodals section assets
 import { ReactComponent as VideosLabelVector } from "../../assets/landing/multimodals/videos-label.svg";
 import { ReactComponent as VideosIconVector } from "../../assets/landing/multimodals/videos-icon.svg";
 import { ReactComponent as ImagensLabelVector } from "../../assets/landing/multimodals/images-label.svg";
@@ -34,6 +34,11 @@ import { ReactComponent as ForumsLabelVector } from "../../assets/landing/multim
 import { ReactComponent as ForumsIconVector } from "../../assets/landing/multimodals/forums-icon.svg";
 import { ReactComponent as AvaliationsLabelVector } from "../../assets/landing/multimodals/avaliations-label.svg";
 import { ReactComponent as AvaliationsIconVector } from "../../assets/landing/multimodals/avaliations-icon.svg";
+// Personalization section assets
+import { ReactComponent as PersonalizationLabel } from "../../assets/landing/personalization/personalization-label.svg";
+import personalizationFirstPalete from "../../assets/landing/personalization/palete-1.png";
+import personalizationSecondPalete from "../../assets/landing/personalization/palete-2.png";
+import personalizationThirdPalete from "../../assets/landing/personalization/palete-3.png";
 
 function Landing() {
   const [isDesktop, setIsDesktop] = useState<boolean>(
@@ -156,7 +161,7 @@ function Landing() {
       </section>
 
       {/* Multimodals */}
-      <section className="multimodal">
+      <section className="multimodals">
         <img
           className="mm-wolf-img"
           src={multimodalWolfImg}
@@ -167,6 +172,40 @@ function Landing() {
           <MultimodalsLabel className="multimodals-label" />
 
           <div className="multimodals-description-area">{multimodalItems}</div>
+        </div>
+      </section>
+
+      {/* Personalization */}
+      <section className="personalization">
+        <PersonalizationLabel className="personalization-label" />
+
+        <p>
+          A <span>MindLab</span> disponibiliza uma excelente capacidade de personalização da
+          plataforma, permitindo que os estudantes <span>selecionem qualquer
+          tonalidade desejada e alterem integralmente a interface</span> de todo o
+          ambiente educacional. Como resultado, isso cria uma experiência
+          singular e adaptável, garantindo que cada utilização seja exclusiva e
+          personalizada!
+        </p>
+
+        <div className="personalization-images">
+          <img
+            className="personalization-first-palete"
+            src={personalizationFirstPalete}
+            alt="wolf with color palete"
+          />
+
+          <img
+            className="personalization-second-palete"
+            src={personalizationSecondPalete}
+            alt="wolf with color palete"
+          />
+
+          <img
+            className="personalization-third-palete"
+            src={personalizationThirdPalete}
+            alt="wolf with color palete"
+          />
         </div>
       </section>
     </div>
