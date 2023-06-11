@@ -1,6 +1,6 @@
 .landing-container {
     overflow-x: hidden;
-    height: 300vh;
+    height: 700vh;
 }
 
 .showcase {
@@ -129,6 +129,7 @@
     position: relative;
     display: flex;
     justify-content: end;
+    margin-bottom: 150px;
 }
 
 .courses-wolf-img {
@@ -164,6 +165,36 @@
     transform: scaleX(-1);
 }
 
+.multimodal {
+    position: relative;
+}
+
+.mm-wolf-img {
+    position: absolute;
+    right: -100px;
+    top: -80px;
+    width: 260px;
+}
+
+.multimodals-label {
+    height: 50px;
+    width: auto;
+    transform: translateX(10%);
+}
+
+.multimodals-area {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.multimodals-description-area {
+    width: 90%;
+}
+
 @media(min-width: 400px) {
     .sc-wolf-img {
         top: 20%;
@@ -176,6 +207,14 @@
 
     .sc-blue-img {
         top: -28%;
+    }
+
+    .mm-wolf-img {
+        width: 300px;
+    }
+    
+    .multimodals-label {
+        height: 65px;
     }
 }
 
@@ -233,6 +272,15 @@
         left: 15%;
         top: 50%;
     }
+
+    .mm-wolf-img {
+        width: 320px;
+        right: -80px;
+    }
+
+    .multimodals-label {
+        height: 75px;
+    }
 }
 
 @media(min-width: 768px) {
@@ -282,6 +330,19 @@
 
     .courses-label-img {
         transform: scale(1.4);
+    }
+
+    .multimodals-label {
+        height: 90px;
+    }
+
+    .mm-wolf-img {
+        width: 390px;
+        right: -60px;
+    }
+
+    .multimodals-description-area {
+        width: 70%;
     }
 }
 
@@ -357,6 +418,10 @@
         border-radius: 18px;
     }
 
+    .our-courses {
+        margin-bottom: 70px;
+    }
+
     .courses-cards {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -367,5 +432,25 @@
         transform: scale(1.7);
         left: 16%;
         top: -10%;
+    }
+
+    .multimodals-area {
+        width: 70%;
+    }
+
+    .mm-wolf-img {
+        width: 480px;
+        right: -60px;
+        top: 30px;
+    }
+
+    .multimodals-label {
+        height: 120px;
+        transform: translateX(40%);
+    }
+
+    .multimodals-description-area {
+        width: 100%;
+        align-self: center;
     }
 }

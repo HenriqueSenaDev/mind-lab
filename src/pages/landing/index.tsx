@@ -6,6 +6,13 @@ import { ReactComponent as OrangeVector } from "../../assets/landing/showcase-or
 import { ReactComponent as WolfCoursesVector } from "../../assets/landing/our-courses.svg";
 import { ReactComponent as CoursesLabelVector } from "../../assets/landing/our-courses-label.svg";
 import { ReactComponent as CoursesArrow } from "../../assets/landing/courses-arrow.svg";
+import { ReactComponent as MultimodalsLabel } from "../../assets/landing/multimodals-label.svg";
+import CourseCard from "./components/course-card";
+import MultimodalItem from "./components/multimodal-item";
+import "./styles.css";
+
+// Course cards assets
+import multimodalWolfImg from "../../assets/landing/multimodals.png";
 import planning from "../../assets/landing/courses/planning.png";
 import design from "../../assets/landing/courses/design.png";
 import programming from "../../assets/landing/courses/programming.png";
@@ -14,8 +21,19 @@ import backend from "../../assets/landing/courses/backend.png";
 import pixelArt from "../../assets/landing/courses/pixel-art.png";
 import scratch from "../../assets/landing/courses/scratch.png";
 import cientificMetodology from "../../assets/landing/courses/cientific-metodology.png";
-import CourseCard from "./components/course-card";
-import "./styles.css";
+// Multimodal assets
+import { ReactComponent as VideosLabelVector } from "../../assets/landing/multimodals/videos-label.svg";
+import { ReactComponent as VideosIconVector } from "../../assets/landing/multimodals/videos-icon.svg";
+import { ReactComponent as ImagensLabelVector } from "../../assets/landing/multimodals/images-label.svg";
+import { ReactComponent as ImagensIconVector } from "../../assets/landing/multimodals/images-icon.svg";
+import { ReactComponent as TextsLabelVector } from "../../assets/landing/multimodals/texts-label.svg";
+import { ReactComponent as TextsIconVector } from "../../assets/landing/multimodals/texts-icon.svg";
+import { ReactComponent as AudioLabelVector } from "../../assets/landing/multimodals/audio-label.svg";
+import { ReactComponent as AudioIconVector } from "../../assets/landing/multimodals/audio-icon.svg";
+import { ReactComponent as ForumsLabelVector } from "../../assets/landing/multimodals/forums-label.svg";
+import { ReactComponent as ForumsIconVector } from "../../assets/landing/multimodals/forums-icon.svg";
+import { ReactComponent as AvaliationsLabelVector } from "../../assets/landing/multimodals/avaliations-label.svg";
+import { ReactComponent as AvaliationsIconVector } from "../../assets/landing/multimodals/avaliations-icon.svg";
 
 function Landing() {
   const [isDesktop, setIsDesktop] = useState<boolean>(
@@ -37,12 +55,46 @@ function Landing() {
     />,
   ];
 
+  const multimodalItems = [
+    <MultimodalItem
+      labelVector={<VideosLabelVector className="multimodal-item-label" />}
+      iconVector={<VideosIconVector className="multimodal-item-icon" />}
+      description="Fornecem uma experiência visualmente estimulante, permitindo a compreensão de conceitos de forma prática e envolvente."
+    />,
+    <MultimodalItem
+      labelVector={<ImagensLabelVector className="multimodal-item-label" />}
+      iconVector={<ImagensIconVector className="multimodal-item-icon" />}
+      description="Ajudam a visualizar abstrações, tornando os conceitos de programação mais tangíveis e facilitando a conexão entre ideias."
+    />,
+    <MultimodalItem
+      labelVector={<TextsLabelVector className="multimodal-item-label" />}
+      iconVector={<TextsIconVector className="multimodal-item-icon" />}
+      description="Fornecem uma abordagem mais estruturada e detalhada, permitindo que os alunos revisem e consultem informações importantes."
+    />,
+    <MultimodalItem
+      labelVector={<AudioLabelVector className="multimodal-item-label" />}
+      iconVector={<AudioIconVector className="multimodal-item-icon" />}
+      description="Possibilitam uma aprendizagem auditiva, permitindo que os adolescentes processem e absorvam informações através do som."
+    />,
+    <MultimodalItem
+      labelVector={<ForumsLabelVector className="multimodal-item-label" />}
+      iconVector={<ForumsIconVector className="multimodal-item-icon" />}
+      description="Proporcionam um ambiente de interação social, onde os adolescentes podem trocar experiências, fazer perguntas e colaborar com seus colegas."
+    />,
+    <MultimodalItem
+      labelVector={<AvaliationsLabelVector className="multimodal-item-label" />}
+      iconVector={<AvaliationsIconVector className="multimodal-item-icon" />}
+      description="Incentivam a reflexão e a resolução de problemas, promovendo o pensamento crítico e a aplicação prática dos conhecimentos adquiridos."
+    />,
+  ];
+
   window.addEventListener("resize", () =>
     setIsDesktop(document.body.clientWidth > 992)
   );
 
   return (
     <div className="landing-container">
+      {/* Showcase */}
       <section className="showcase">
         <button className="login-button">Login</button>
 
@@ -76,6 +128,7 @@ function Landing() {
         </div>
       </section>
 
+      {/* Our Courses */}
       <section className="our-courses">
         <WolfCoursesVector className="courses-wolf-img" />
 
@@ -99,6 +152,21 @@ function Landing() {
               />
             )}
           </div>
+        </div>
+      </section>
+
+      {/* Multimodals */}
+      <section className="multimodal">
+        <img
+          className="mm-wolf-img"
+          src={multimodalWolfImg}
+          alt="multimodals wolf"
+        />
+
+        <div className="multimodals-area">
+          <MultimodalsLabel className="multimodals-label" />
+
+          <div className="multimodals-description-area">{multimodalItems}</div>
         </div>
       </section>
     </div>
