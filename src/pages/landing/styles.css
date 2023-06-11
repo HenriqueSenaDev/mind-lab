@@ -202,6 +202,7 @@
     align-items: center;
     justify-content: center;
     gap: 14px;
+    margin-bottom: 260px;
 }
 
 .personalization-label {
@@ -254,6 +255,61 @@
     top: 75px;
 }
 
+.discussion-forums {
+    position: relative;
+    height: 350px;
+}
+
+.discussion-forums-label {
+    position: absolute;
+    width: 70%;
+    height: auto;
+    right: 5%;
+}
+
+.df-wolf {
+    width: 80%;
+    position: absolute;
+    left: -28%;
+    top: -10%;
+}
+
+.discussion-forums-sample {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    right: 20px;
+    top: 5%;
+}
+
+.mobile-forum-sample {
+    height: auto;
+    position: absolute;
+    width: 110%;
+}
+
+.desktop-forum-sample {
+    display: none;
+}
+
+.df-icon {
+    position: absolute;
+    height: auto;
+}
+
+.df-icon:nth-of-type(1) {
+    width: 35px;
+    right: 8px;
+    top: 25%;
+    rotate: -12deg;
+}
+
+.df-icon:nth-of-type(2) {
+    width: 40px;
+    left: 24px;
+    top: 50%;
+}
+
 @media(min-width: 400px) {
     .sc-wolf-img {
         top: 20%;
@@ -275,11 +331,28 @@
     .multimodals-label {
         height: 65px;
     }
+
+    .personalization {
+        margin-bottom: 320px;
+    }
 }
 
 @media(min-width: 500px) {
     .sc-blue-img {
         right: -75vw;
+    }
+
+    .personalization {
+        margin-bottom: 360px;
+    }
+
+    .df-icon:nth-of-type(1) {
+        top: 40%;
+    }
+    
+    .df-icon:nth-of-type(2) {
+        left: 34px;
+        top: 75%;
     }
 }
 
@@ -347,10 +420,20 @@
 
     .personalization {
         gap: 18px;
+        margin-bottom: 65%;
     }
 
     .personalization-label {
         width: 55%;
+    }
+
+    .df-icon:nth-of-type(1) {
+        top: 45%;
+    }
+    
+    .df-icon:nth-of-type(2) {
+        left: 54px;
+        top: 85%;
     }
 }
 
@@ -422,6 +505,27 @@
 
     .personalization-label {
         width: 50%;
+    }
+
+    .discussion-forums-label {
+        width: 60%;
+        transform: translateX(-10%);
+    }
+
+    .df-wolf {
+        top: -20%;
+    }
+
+    .df-icon:nth-of-type(1) {
+        width: 50px;
+        right: 8px;
+        top: 60%;
+    }
+    
+    .df-icon:nth-of-type(2) {
+        width: 60px;
+        left: 42px;
+        top: 120%;
     }
 }
 
@@ -577,4 +681,43 @@
         transform: translateX(-15%);
     }
 
+    .personalization {
+        margin-bottom: 40px;
+    }
+
+    .discussion-forums-label {
+        width: 45%;
+        transform: translateX(-20%);
+        top: 25%;
+    }
+
+    .df-wolf {
+        width: 60%;
+        left: -18%;
+        top: -60%;
+    }
+
+    .mobile-forum-sample {
+        display: none;
+    }
+
+    .desktop-forum-sample {
+        display: unset;
+        position: absolute;
+        width: 115%;
+        top: 50%;
+        right: 0;
+    }
+
+    .df-icon:nth-of-type(1) {
+        width: 70px;
+        right: 8px;
+        top: 45%;
+    }
+    
+    .df-icon:nth-of-type(2) {
+        width: 90px;
+        left: -125px;
+        top: 140%;
+    }
 }

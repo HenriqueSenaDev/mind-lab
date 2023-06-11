@@ -35,10 +35,16 @@ import { ReactComponent as ForumsIconVector } from "../../assets/landing/multimo
 import { ReactComponent as AvaliationsLabelVector } from "../../assets/landing/multimodals/avaliations-label.svg";
 import { ReactComponent as AvaliationsIconVector } from "../../assets/landing/multimodals/avaliations-icon.svg";
 // Personalization section assets
-import { ReactComponent as PersonalizationLabel } from "../../assets/landing/personalization/personalization-label.svg";
+import { ReactComponent as PersonalizationLabelVector } from "../../assets/landing/personalization/personalization-label.svg";
 import personalizationFirstPalete from "../../assets/landing/personalization/palete-1.png";
 import personalizationSecondPalete from "../../assets/landing/personalization/palete-2.png";
 import personalizationThirdPalete from "../../assets/landing/personalization/palete-3.png";
+// Discussion Forums section assets
+import { ReactComponent as DiscussionForumsLabelVector } from "../../assets/landing/forums/forums-label.svg";
+import { ReactComponent as HeartMessageIcon } from "../../assets/landing/forums/heart-message.svg";
+import discussionForumsWolfImg from "../../assets/landing/forums/forums-wolf.png";
+import mobileForumSample from "../../assets/landing/forums/mobile-forum.png"; 
+import desktopForumSample from "../../assets/landing/forums/desktop-forum.png"; 
 
 function Landing() {
   const [isDesktop, setIsDesktop] = useState<boolean>(
@@ -177,7 +183,7 @@ function Landing() {
 
       {/* Personalization */}
       <section className="personalization">
-        <PersonalizationLabel className="personalization-label" />
+        <PersonalizationLabelVector className="personalization-label" />
 
         <p>
           A <span>MindLab</span> disponibiliza uma excelente capacidade de personalização da
@@ -206,6 +212,23 @@ function Landing() {
             src={personalizationThirdPalete}
             alt="wolf with color palete"
           />
+        </div>
+      </section>
+
+      {/* Discussion Forums */}
+      <section className="discussion-forums">
+        <DiscussionForumsLabelVector className="discussion-forums-label" />
+
+        <img className="df-wolf" src={discussionForumsWolfImg} alt="wolf with megaphone" />
+
+        <div className="discussion-forums-sample">
+          <img className="mobile-forum-sample" src={mobileForumSample} alt="mobile forum sample" />
+
+          <img className="desktop-forum-sample" src={desktopForumSample} alt="desktop forum sample" />
+
+          <ForumsIconVector className="df-icon" />
+
+          <HeartMessageIcon className="df-icon"/>
         </div>
       </section>
     </div>
