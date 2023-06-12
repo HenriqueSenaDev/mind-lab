@@ -1,6 +1,6 @@
 .landing-container {
     overflow-x: hidden;
-    height: 700vh;
+    height: 800vh;
 }
 
 .showcase {
@@ -157,6 +157,9 @@
 .courses-left-arrow {
     position: absolute;
     top: 30%;
+}
+
+.courses-right-arrow {
     right: -28%;
 }
 
@@ -367,6 +370,68 @@
     top: -50px;
 }
 
+.faq {
+    display: flex;
+    margin-top: 40px;
+    position: relative;
+    justify-content: flex-end;
+}
+
+.faq-label {
+    width: 80%;
+    height: auto;
+}
+
+.faq-wolf {
+    position: absolute;
+    left: -30%;
+    width: 90%;
+    top: -5%;
+    z-index: 1;
+}
+
+.faq-container {
+    width: 60%;
+    position: relative;
+}
+
+.faq-items-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.interrogative-msg-icon {
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    left: -10%;
+}
+
+.exclamative-msg-icon {
+    z-index: 1;
+    position: absolute;
+    top: 20%;
+    right: 2%;
+}
+
+.faq-right-arrow,
+.faq-left-arrow {
+    position: absolute;
+    top: 35%;
+    z-index: 1;
+}
+
+.faq-right-arrow {
+    right: -10%;
+}
+
+.faq-left-arrow {
+    left: -10%;
+    transform: scaleX(-1);
+}
+
 @media(min-width: 400px) {
     .sc-wolf-img {
         top: 20%;
@@ -400,6 +465,10 @@
     .progress-container p {
         letter-spacing: 2px;
     }
+
+    .faq-container {
+        width: 55%;
+    }
 }
 
 @media(min-width: 500px) {
@@ -427,6 +496,22 @@
     .pt-wolf {
         width: 60%;
         right: -10%;
+    }
+
+    .faq {
+        margin-top: 70px;
+    }
+
+    .faq-wolf {
+        top: -18%;
+    }
+
+    .faq-right-arrow {
+        right: -5%;
+    }
+
+    .faq-left-arrow {
+        left: -5%;
     }
 }
 
@@ -516,6 +601,37 @@
 
     .progress-container p {
         font-size: 15px;
+    }
+
+    .faq {
+        margin-top: 15%;
+    }
+
+    .faq-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .faq-label {
+        width: 90%;
+    }
+
+    .faq-wolf {
+        width: 75%;
+        left: -15%;
+        top: -10%;
+    }
+
+    .interrogative-msg-icon {
+        left: 10px;
+    }
+}
+
+@media(min-width: 650px) {
+    .faq {
+        margin-top: 25%;
     }
 }
 
@@ -631,6 +747,32 @@
         top: -30%;
         width: 55%;
         right: -5%;
+    }
+
+    .faq {
+        margin-top: 12%;
+    }
+
+    .faq-wolf {
+        width: 70%;
+        left: -15%;
+    }
+
+    .faq-container {
+        gap: 28px;
+    }
+
+    .interrogative-msg-icon {
+        width: 60px;
+        height: auto;
+        left: 5%;
+    }
+    
+    .exclamative-msg-icon {
+        width: 70px;
+        height: auto;
+        top: 30%;
+        right: 5%;
     }
 }
 
@@ -856,4 +998,31 @@
         transform: translateX(-5%) translateY(-5%);
     }
 
+    .faq {
+        margin-top: 0;
+    }
+
+    .faq-wolf {
+        width: 50%;
+        left: -5%;
+    }
+
+    .faq-container {
+        width: 65%;
+        z-index: 1;
+        padding-right: 20px; 
+    }
+
+    .faq-label {
+        width: 60%;
+    }
+
+    .faq-items-container {
+        align-items: baseline;
+    }
+
+    .interrogative-msg-icon {
+        left: -8%;
+        bottom: -5%;
+    }
 }

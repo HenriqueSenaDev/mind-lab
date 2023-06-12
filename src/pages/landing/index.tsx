@@ -5,7 +5,7 @@ import { ReactComponent as BlueVector } from "../../assets/landing/showcase-blue
 import { ReactComponent as OrangeVector } from "../../assets/landing/showcase-orange.svg";
 import { ReactComponent as WolfCoursesVector } from "../../assets/landing/our-courses.svg";
 import { ReactComponent as CoursesLabelVector } from "../../assets/landing/our-courses-label.svg";
-import { ReactComponent as CoursesArrow } from "../../assets/landing/courses-arrow.svg";
+import { ReactComponent as Arrow } from "../../assets/common/arrow.svg";
 import { ReactComponent as MultimodalsLabel } from "../../assets/landing/multimodals-label.svg";
 import CourseCard from "./components/course-card";
 import MultimodalItem from "./components/multimodal-item";
@@ -46,16 +46,23 @@ import discussionForumsWolfImg from "../../assets/landing/forums/forums-wolf.png
 import mobileForumSample from "../../assets/landing/forums/mobile-forum.png";
 import desktopForumSample from "../../assets/landing/forums/desktop-forum.png";
 // Progress Tracking section assets
-import { ReactComponent as ProgressTrackingLabel } from "../../assets/landing/progress-tracking/progress-tracking-label.svg";
+import { ReactComponent as ProgressTrackingLabelVector } from "../../assets/landing/progress-tracking/progress-tracking-label.svg";
 import { ReactComponent as BarGraphIcon } from "../../assets/landing/progress-tracking/bar-graph.svg";
 import progressTrackingWolf from "../../assets/landing/progress-tracking/progress-tracking-wolf.png";
 import porgressGraph from "../../assets/landing/progress-tracking/progress-graph.png";
+// FAQ session assets
+import { ReactComponent as FaqLabelVector } from "../../assets/landing/faq/faq-label.svg";
+import { ReactComponent as ExclamativeMessageIcon } from "../../assets/landing/faq/exclamative-message.svg";
+import { ReactComponent as InterrogativeMessageIcon } from "../../assets/landing/faq/interrogative-message.svg";
+import faqWolf from "../../assets/landing/faq/faq-wolf.png";
+import FaqItem from "./components/faq-item";
 
 function Landing() {
   const [isDesktop, setIsDesktop] = useState<boolean>(
     document.body.clientWidth > 992
   );
   const [courseCardIndex, setCourseCardIndex] = useState<number>(0);
+  const [faqItemIndex, setFaqItemIndex] = useState<number>(0);
 
   const coursesCards = [
     <CourseCard imgSrc={planning} moduleTitle="Planejamento" />,
@@ -101,6 +108,21 @@ function Landing() {
       labelVector={<AvaliationsLabelVector className="multimodal-item-label" />}
       iconVector={<AvaliationsIconVector className="multimodal-item-icon" />}
       description="Incentivam a reflexão e a resolução de problemas, promovendo o pensamento crítico e a aplicação prática dos conhecimentos adquiridos."
+    />,
+  ];
+
+  const faqItems = [
+    <FaqItem
+      question="Posso pausar e retomar depois os cursos?"
+      answer="Sim, você pode pausar o seu progresso nos cursos a qualquer momento e retomá-lo quando quiser. Nossa plataforma salva automaticamente o seu progresso, permitindo que você continue exatamente de onde parou. Dessa forma, você pode estudar no seu próprio ritmo, de acordo com sua disponibilidade e conveniência."
+    />,
+    <FaqItem
+      question="Como posso me inscrever na plataforma?"
+      answer="Para se cadastrar na plataforma, basta acessar a página de registro clicando em “Inscreva-se agora!” e preencher suas informações básicas, como nome, e-mail e criar uma senha. Depois de fornecer esses detalhes, você estará pronto para explorar os cursos e recursos disponíveis!"
+    />,
+    <FaqItem
+      question="Posso fazer perguntas aos professores?"
+      answer="Claro! Na plataforma, você terá a oportunidade de interagir com os professores e fazer perguntas relacionadas aos cursos. No fórum de discussão integrado, você pode postar suas dúvidas e receber respostas dos professores e também de outros alunos. É um espaço colaborativo onde todos podem compartilhar conhecimentos."
     />,
   ];
 
@@ -155,14 +177,14 @@ function Landing() {
             {!isDesktop ? coursesCards[courseCardIndex] : coursesCards}
 
             {!isDesktop && courseCardIndex < coursesCards.length - 1 && (
-              <CoursesArrow
+              <Arrow
                 className="courses-right-arrow"
                 onClick={() => setCourseCardIndex(courseCardIndex + 1)}
               />
             )}
 
             {!isDesktop && courseCardIndex > 0 && (
-              <CoursesArrow
+              <Arrow
                 className="courses-left-arrow"
                 onClick={() => setCourseCardIndex(courseCardIndex - 1)}
               />
@@ -262,7 +284,7 @@ function Landing() {
 
         <div className="progress-container">
           <div className="progress-tracking-label-container">
-            <ProgressTrackingLabel className="progress-tracking-label" />
+            <ProgressTrackingLabelVector className="progress-tracking-label" />
 
             <BarGraphIcon className="bar-graph-icon" />
           </div>
@@ -270,11 +292,13 @@ function Landing() {
           <p>
             Mantenha-se no controle do seu aprendizado! Com a funcionalidade de
             Acompanhamento de Progresso, você poderá monitorar seu
-            desenvolvimento de forma fácil e intuitiva. <span>Acompanhe suas aulas
-            concluídas, confira suas respostas corretas e erradas em questões e
-            avalie seu desempenho ao longo do tempo.</span> Com essa ferramenta, você
-            terá uma visão clara do seu progresso, permitindo que você se motive
-            e alcance seu potencial máximo!
+            desenvolvimento de forma fácil e intuitiva.{" "}
+            <span>
+              Acompanhe suas aulas concluídas, confira suas respostas corretas e
+              erradas em questões e avalie seu desempenho ao longo do tempo.
+            </span>{" "}
+            Com essa ferramenta, você terá uma visão clara do seu progresso,
+            permitindo que você se motive e alcance seu potencial máximo!
           </p>
         </div>
 
@@ -283,6 +307,37 @@ function Landing() {
           src={progressTrackingWolf}
           alt="progress tracking wolf"
         />
+      </section>
+
+      {/* FAQ */}
+      <section className="faq">
+        <img className="faq-wolf" src={faqWolf} alt="faq wolf" />
+
+        <div className="faq-container">
+          <FaqLabelVector className="faq-label" />
+
+          <InterrogativeMessageIcon className="interrogative-msg-icon" />
+
+          <ExclamativeMessageIcon className="exclamative-msg-icon" />
+
+          <div className="faq-items-container">
+            {!isDesktop ? faqItems[faqItemIndex] : faqItems}
+
+            {!isDesktop && faqItemIndex < faqItems.length - 1 && (
+              <Arrow
+                className="faq-right-arrow"
+                onClick={() => setFaqItemIndex(faqItemIndex + 1)}
+              />
+            )}
+
+            {!isDesktop && faqItemIndex > 0 && (
+              <Arrow
+                className="faq-left-arrow"
+                onClick={() => setFaqItemIndex(faqItemIndex - 1)}
+              />
+            )}
+          </div>
+        </div>
       </section>
     </div>
   );
