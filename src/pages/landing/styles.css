@@ -258,6 +258,7 @@
 .discussion-forums {
     position: relative;
     height: 350px;
+    margin-bottom: 20px;
 }
 
 .discussion-forums-label {
@@ -310,6 +311,62 @@
     top: 50%;
 }
 
+.progress-tracking {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.progress-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    gap: 22px;
+    padding-left: 14px;
+}
+
+.progress-graph-image {
+    display: none;
+}
+
+.progress-tracking-label-container {
+    position: relative;
+}
+
+.progress-tracking-label {
+    width: 80%;
+    height: auto;
+}
+
+.bar-graph-icon {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.progress-container p {
+    text-align: justify;
+    font-weight: 500;
+    color: #535353;
+    line-height: 1.2;
+    font-size: 13px;
+    width: 80%;
+}
+
+.progress-container p span {
+    color: #0093CE;
+    font-weight: 700;
+}
+
+.pt-wolf {
+    position: absolute;
+    width: 70%;
+    height: auto;
+    right: -18%;
+    top: -50px;
+}
+
 @media(min-width: 400px) {
     .sc-wolf-img {
         top: 20%;
@@ -335,6 +392,14 @@
     .personalization {
         margin-bottom: 320px;
     }
+
+    .discussion-forums {
+        margin-bottom: 70px;
+    }
+
+    .progress-container p {
+        letter-spacing: 2px;
+    }
 }
 
 @media(min-width: 500px) {
@@ -353,6 +418,15 @@
     .df-icon:nth-of-type(2) {
         left: 34px;
         top: 75%;
+    }
+
+    .discussion-forums {
+        margin-bottom: 30%;
+    }
+
+    .pt-wolf {
+        width: 60%;
+        right: -10%;
     }
 }
 
@@ -427,6 +501,10 @@
         width: 55%;
     }
 
+    .discussion-forums {
+        margin-bottom: 40%;
+    }
+
     .df-icon:nth-of-type(1) {
         top: 45%;
     }
@@ -434,6 +512,10 @@
     .df-icon:nth-of-type(2) {
         left: 54px;
         top: 85%;
+    }
+
+    .progress-container p {
+        font-size: 15px;
     }
 }
 
@@ -507,6 +589,10 @@
         width: 50%;
     }
 
+    .discussion-forums {
+        margin-bottom: 50%;
+    }
+
     .discussion-forums-label {
         width: 60%;
         transform: translateX(-10%);
@@ -526,6 +612,25 @@
         width: 60px;
         left: 42px;
         top: 120%;
+    }
+
+    .progress-container {
+        padding-left: 30px;
+    }
+
+    .progress-tracking-label {
+        width: 70%;
+    }
+
+    .progress-container p {
+        width: 75%;
+        line-height: 1.6;
+    }
+    
+    .pt-wolf {
+        top: -30%;
+        width: 55%;
+        right: -5%;
     }
 }
 
@@ -685,6 +790,10 @@
         margin-bottom: 40px;
     }
 
+    .discussion-forums {
+        margin-bottom: 18%;
+    }
+
     .discussion-forums-label {
         width: 45%;
         transform: translateX(-20%);
@@ -720,4 +829,31 @@
         left: -125px;
         top: 140%;
     }
+
+    .progress-graph-image {
+        display: unset;
+        width: 28%;
+    }
+
+    .progress-tracking-label {
+        width: 120%;
+        transform: translateX(-5%);
+    }
+
+    .progress-container p {
+        width: 120%;
+        line-height: 1.2;
+        font-size: 16px;
+    }
+
+    .bar-graph-icon {
+        display: none;
+    }
+
+    .pt-wolf {
+        position: relative;
+        width: 40%;
+        transform: translateX(-5%) translateY(-5%);
+    }
+
 }

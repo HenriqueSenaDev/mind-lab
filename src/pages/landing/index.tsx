@@ -43,8 +43,13 @@ import personalizationThirdPalete from "../../assets/landing/personalization/pal
 import { ReactComponent as DiscussionForumsLabelVector } from "../../assets/landing/forums/forums-label.svg";
 import { ReactComponent as HeartMessageIcon } from "../../assets/landing/forums/heart-message.svg";
 import discussionForumsWolfImg from "../../assets/landing/forums/forums-wolf.png";
-import mobileForumSample from "../../assets/landing/forums/mobile-forum.png"; 
-import desktopForumSample from "../../assets/landing/forums/desktop-forum.png"; 
+import mobileForumSample from "../../assets/landing/forums/mobile-forum.png";
+import desktopForumSample from "../../assets/landing/forums/desktop-forum.png";
+// Progress Tracking section assets
+import { ReactComponent as ProgressTrackingLabel } from "../../assets/landing/progress-tracking/progress-tracking-label.svg";
+import { ReactComponent as BarGraphIcon } from "../../assets/landing/progress-tracking/bar-graph.svg";
+import progressTrackingWolf from "../../assets/landing/progress-tracking/progress-tracking-wolf.png";
+import porgressGraph from "../../assets/landing/progress-tracking/progress-graph.png";
 
 function Landing() {
   const [isDesktop, setIsDesktop] = useState<boolean>(
@@ -186,12 +191,15 @@ function Landing() {
         <PersonalizationLabelVector className="personalization-label" />
 
         <p>
-          A <span>MindLab</span> disponibiliza uma excelente capacidade de personalização da
-          plataforma, permitindo que os estudantes <span>selecionem qualquer
-          tonalidade desejada e alterem integralmente a interface</span> de todo o
-          ambiente educacional. Como resultado, isso cria uma experiência
-          singular e adaptável, garantindo que cada utilização seja exclusiva e
-          personalizada!
+          A <span>MindLab</span> disponibiliza uma excelente capacidade de
+          personalização da plataforma, permitindo que os estudantes{" "}
+          <span>
+            selecionem qualquer tonalidade desejada e alterem integralmente a
+            interface
+          </span>{" "}
+          de todo o ambiente educacional. Como resultado, isso cria uma
+          experiência singular e adaptável, garantindo que cada utilização seja
+          exclusiva e personalizada!
         </p>
 
         <div className="personalization-images">
@@ -219,17 +227,62 @@ function Landing() {
       <section className="discussion-forums">
         <DiscussionForumsLabelVector className="discussion-forums-label" />
 
-        <img className="df-wolf" src={discussionForumsWolfImg} alt="wolf with megaphone" />
+        <img
+          className="df-wolf"
+          src={discussionForumsWolfImg}
+          alt="wolf with megaphone"
+        />
 
         <div className="discussion-forums-sample">
-          <img className="mobile-forum-sample" src={mobileForumSample} alt="mobile forum sample" />
+          <img
+            className="mobile-forum-sample"
+            src={mobileForumSample}
+            alt="mobile forum sample"
+          />
 
-          <img className="desktop-forum-sample" src={desktopForumSample} alt="desktop forum sample" />
+          <img
+            className="desktop-forum-sample"
+            src={desktopForumSample}
+            alt="desktop forum sample"
+          />
 
           <ForumsIconVector className="df-icon" />
 
-          <HeartMessageIcon className="df-icon"/>
+          <HeartMessageIcon className="df-icon" />
         </div>
+      </section>
+
+      {/* Progress Tracking */}
+      <section className="progress-tracking">
+        <img
+          className="progress-graph-image"
+          src={porgressGraph}
+          alt="progress graph"
+        />
+
+        <div className="progress-container">
+          <div className="progress-tracking-label-container">
+            <ProgressTrackingLabel className="progress-tracking-label" />
+
+            <BarGraphIcon className="bar-graph-icon" />
+          </div>
+
+          <p>
+            Mantenha-se no controle do seu aprendizado! Com a funcionalidade de
+            Acompanhamento de Progresso, você poderá monitorar seu
+            desenvolvimento de forma fácil e intuitiva. <span>Acompanhe suas aulas
+            concluídas, confira suas respostas corretas e erradas em questões e
+            avalie seu desempenho ao longo do tempo.</span> Com essa ferramenta, você
+            terá uma visão clara do seu progresso, permitindo que você se motive
+            e alcance seu potencial máximo!
+          </p>
+        </div>
+
+        <img
+          className="pt-wolf"
+          src={progressTrackingWolf}
+          alt="progress tracking wolf"
+        />
       </section>
     </div>
   );
