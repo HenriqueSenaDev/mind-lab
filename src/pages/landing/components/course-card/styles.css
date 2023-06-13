@@ -1,6 +1,7 @@
 .course-card {
     position: relative;
     height: 190px;
+    width: auto;
     border-radius:15px;
     cursor: pointer;
     transition: all ease 0.2s;

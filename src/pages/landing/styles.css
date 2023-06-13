@@ -972,6 +972,10 @@
         top: 140%;
     }
 
+    .progress-tracking {
+        margin-top: 5%;
+    }
+
     .progress-graph-image {
         display: unset;
         width: 28%;
@@ -1024,5 +1028,15 @@
     .interrogative-msg-icon {
         left: -8%;
         bottom: -5%;
+    }
+}
+
+@media(min-width: 1400px) {
+    .progress-tracking {
+        margin-top: 25%;
+    }
+
+    .progress-tracking-label {
+        width: 110%;
     }
 }
