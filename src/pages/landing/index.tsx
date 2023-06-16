@@ -9,6 +9,7 @@ import { ReactComponent as Arrow } from "../../assets/common/arrow.svg";
 import { ReactComponent as MultimodalsLabel } from "../../assets/landing/multimodals-label.svg";
 import CourseCard from "./components/course-card";
 import MultimodalItem from "./components/multimodal-item";
+import FaqItem from "./components/faq-item";
 import "./styles.css";
 
 // Our Courses section assets
@@ -55,7 +56,11 @@ import { ReactComponent as FaqLabelVector } from "../../assets/landing/faq/faq-l
 import { ReactComponent as ExclamativeMessageIcon } from "../../assets/landing/faq/exclamative-message.svg";
 import { ReactComponent as InterrogativeMessageIcon } from "../../assets/landing/faq/interrogative-message.svg";
 import faqWolf from "../../assets/landing/faq/faq-wolf.png";
-import FaqItem from "./components/faq-item";
+// Teacher Training section assets
+import { ReactComponent as TeacherIcon } from "../../assets/landing/teacher-training/teacher.svg";
+import { ReactComponent as PaintingIcon } from "../../assets/landing/teacher-training/painting.svg";
+import teaInClass from "../../assets/landing/teacher-training/tea-in-class.png";
+import teacherTrainingWolf from "../../assets/landing/teacher-training/teacher-training-wolf.png";
 
 function Landing() {
   const [isDesktop, setIsDesktop] = useState<boolean>(
@@ -336,6 +341,50 @@ function Landing() {
                 onClick={() => setFaqItemIndex(faqItemIndex - 1)}
               />
             )}
+          </div>
+        </div>
+      </section>
+
+      {/* Teacher Training */}
+      <section className="teacher-training">
+        <div className="teacher-training-header">
+          <h1>
+            ATENÇÃO <span>PROFESSORES!</span>
+          </h1>
+
+          <TeacherIcon className="teacher-icon" />
+        </div>
+
+        <div className="teacher-training-container">
+          <div className="teacher-training-content">
+            <img
+              className="tea-in-class-img"
+              src={teaInClass}
+              alt="tea em sala de aula"
+            />
+
+            <p>
+              Prepare-se para criar um ambiente de aprendizagem verdadeiramente
+              inclusivo com nossa <span>Capacitação: TEA em sala de aula.</span> Este
+              programa exclusivo oferece aos professores as <span>ferramentas e
+              estratégias</span> necessárias para apoiar efetivamente os alunos
+              autistas em sala de aula. Nossa capacitação abrange temas
+              essenciais, desde <span>compreender as necessidades individuais dos
+              alunos até implementar práticas inclusivas</span> que promovam a
+              participação ativa e o desenvolvimento de habilidades. Aprenda a
+              <span>adaptar seu ensino, promover interações positivas e cultivar um
+              ambiente acolhedor</span> para todos os estudantes
+            </p>
+          </div>
+
+          <img className="tt-wolf" src={teacherTrainingWolf} alt="wolf with hand up" />
+
+          <div className="join-us">
+            <button className="join-us-button">
+              JUNTE-SE A NÓS!
+            </button>
+
+            <PaintingIcon className="painting-icon" />
           </div>
         </div>
       </section>

@@ -1,6 +1,5 @@
 .landing-container {
-    overflow-x: hidden;
-    height: 800vh;
+    overflow: hidden;
 }
 
 .showcase {
@@ -432,6 +431,112 @@
     transform: scaleX(-1);
 }
 
+.teacher-training {
+    margin-top: 15%;
+    margin-bottom: 10%;
+}
+
+.teacher-training-header {
+    width: 80%;
+    position: relative;
+}
+
+.teacher-training-header h1 {
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #F3701F;
+    text-align: center;
+}
+
+.teacher-training-header h1 span {
+    color: #0093CE;
+}
+
+.teacher-icon {
+    width: 30px;
+    height: auto;
+    position: absolute;
+    top: -18px;
+    right: 8%;
+}
+
+.teacher-training-container {
+    transform: translateY(-10px);
+    position: relative;
+}
+
+.tea-in-class-img {
+    width: 115%;
+    transform: translateX(-30%);
+}
+
+.teacher-training-content {
+    width: 55%;
+}
+
+.teacher-training-content p {
+    font-size: 10px;
+    text-align: justify;
+    color: #535353;
+    padding: 0 15px;
+    transform: translateY(-5%);
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.teacher-training-content p span {
+    color: #0093CE;
+    font-weight: 600;
+}
+
+.tt-wolf {
+    position: absolute;
+    width: 120%;
+    height: auto;
+    top: -25%;
+    right: -60%;
+}
+
+.join-us {
+    position: absolute;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    top: 90%;
+    right: 0;
+    width: 45%;
+}
+
+.join-us-button {
+    font-family: 'Inter';
+    padding: 5px 27px;
+    border-radius: 10px;
+    font-size: 10px;
+    background-color: transparent;
+    font-weight: 800;
+    color: #0093CE;
+    outline: none;
+    border: none;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all ease 0.2s;
+    z-index: 1;
+}
+
+.join-us-button:hover {
+    background-color: #dedcdc;
+}
+
+.painting-icon {
+    width: 30px;
+    height: auto;
+    position: absolute;
+    left: 0%;
+    top: -70%;
+    z-index: 1;
+}
+
 @media(min-width: 400px) {
     .sc-wolf-img {
         top: 20%;
@@ -468,6 +573,32 @@
 
     .faq-container {
         width: 55%;
+    }
+
+    .teacher-training {
+        margin-top: 25%;
+    }
+
+    .teacher-training-content p {
+        font-size: 12px;
+        padding: 0 20px 0 15px;
+        line-height: 0.9;
+    }
+
+    .tt-wolf {
+        width: 105%;
+        right: -45%;
+        top: -20%;
+    }
+
+    .join-us {
+        top: 85%;
+    }
+}
+
+@media(min-width: 460px) {
+    .join-us {
+        top: 95%;
     }
 }
 
@@ -512,6 +643,27 @@
 
     .faq-left-arrow {
         left: -5%;
+    }
+
+    .teacher-training-header h1 {
+        font-size: 16px;
+    }
+
+    .teacher-training-content p {
+        line-height: 1.2;
+    }
+
+    .tt-wolf {
+        top: -20%;
+    }
+
+    .join-us-button {
+        font-size: 12px;
+    }
+
+    .teacher-icon,
+    .painting-icon {
+        width: 40px;
     }
 }
 
@@ -627,11 +779,50 @@
     .interrogative-msg-icon {
         left: 10px;
     }
+
+    .tt-wolf {
+        top: -30%;
+    }
+
+    .teacher-icon {
+        right: 15%;
+    }
+
+    .painting-icon {
+        left: 5%;
+    }
 }
 
-@media(min-width: 650px) {
+@media(min-width: 630px) {
     .faq {
         margin-top: 25%;
+    }
+
+    .teacher-training-header h1 {
+        font-size: 20px;
+    }
+
+    .tea-in-class-img {
+        width: 130%;
+    }
+
+    .teacher-training-content p {
+        font-size: 15px;
+        line-height: 1;
+    }
+
+    .tt-wolf {
+        width: 100%;
+        top: -25%;
+    }
+
+    .join-us {
+        top: 90%;
+        font-size: 15px;
+    }
+
+    .join-us-button {
+        font-size: 15px;
     }
 }
 
@@ -773,6 +964,30 @@
         height: auto;
         top: 30%;
         right: 5%;
+    }
+
+    .tt-wolf {
+        width: 90%;
+        right: -35%;
+    }
+
+    .teacher-training-content p {
+        line-height: 1.2;
+        padding: 0 20px;
+    }
+
+    .join-us-button {
+        padding: 8px 27px;
+    }
+
+    .teacher-icon {
+        width: 45px;
+        right: 20%;
+    }
+    
+    .painting-icon {
+        width: 45px;
+        left: 10%;
     }
 }
 
@@ -1029,6 +1244,72 @@
         left: -8%;
         bottom: -5%;
     }
+
+    .teacher-training {
+        margin-top: 12%;
+    }
+
+    .teacher-training-header {
+        width: 90%;
+    }
+
+    .teacher-training-header h1 {
+        font-size: 35px;
+        letter-spacing: 3px;
+    }
+
+    .teacher-training-content {
+        width: 70%;
+        display: flex;
+        margin-top: 6%;
+    }
+
+    .teacher-training-content p {
+        line-height: 1.2;
+        font-size: 16px;
+        width: 40%;
+        padding: 0;
+    }
+
+    .tea-in-class-img {
+        width: 50%;
+        transform: scale(1.55) translateX(-10%);
+    }
+
+    .tt-wolf {
+        width: 50%;
+        right: -18%;
+        transform: scale(1.3);
+        top: -70%;
+    }
+
+    .join-us {
+        top: 100%;
+        width: 100%;
+    }
+
+    .join-us-button {
+        padding: 12px 27px;
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+
+    .teacher-icon {
+        width: 65px;
+        right: 25%;
+        top: -80%;
+    }
+
+    .painting-icon {
+        width: 65px;
+        left: 32%;
+    }
+}
+
+@media(min-width: 1140px) {
+    .join-us {
+        top: 85%;
+    }
 }
 
 @media(min-width: 1400px) {
@@ -1037,6 +1318,10 @@
     }
 
     .progress-tracking-label {
+        width: 110%;
+    }
+
+    .progress-container p {
         width: 110%;
     }
 }
