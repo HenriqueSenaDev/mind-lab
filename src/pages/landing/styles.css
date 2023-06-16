@@ -537,6 +537,91 @@
     z-index: 1;
 }
 
+.contact {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.bluered-hearts {
+    position: absolute;
+    width: 60%;
+    right: 0;
+    top: 10%;
+}
+
+.contact-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.questions-area {
+    width: 40%;
+}
+
+.contact-wolf {
+    width: 50%;
+}
+
+.contact-label {
+    width: 100%;
+    height: auto;
+}
+
+.questions-area-header h1 {
+    font-size: 12px;
+    color: #F3701F;
+}
+
+.contact-vias {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.contact-hearts {
+    display: none;
+}
+
+.contact-via {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 15px;
+    border-radius: 10px;
+    padding: 6px;
+    transition: all ease 0.2s;
+}
+
+.contact-via span {
+    color: #F3701F;
+    font-weight: 600;
+}
+
+.contact-via:nth-of-type(1) {
+    transform: translateX(-25%);
+    font-size: 8px;
+}
+
+.contact-via:nth-of-type(2) {
+    transform: translateX(15%) translateY(-20%);
+    font-size: 7px;
+}
+
+.contact-via:nth-of-type(3) {
+    transform: translateX(-20%) translateY(-20%);
+    font-size: 7px;
+}
+
+.instagram-icon,
+.email-icon,
+.phone-icon {
+    width: 40px;
+    height: auto;
+}
+
 @media(min-width: 400px) {
     .sc-wolf-img {
         top: 20%;
@@ -554,7 +639,7 @@
     .mm-wolf-img {
         width: 300px;
     }
-    
+
     .multimodals-label {
         height: 65px;
     }
@@ -594,6 +679,15 @@
     .join-us {
         top: 85%;
     }
+
+    .contact-via:nth-of-type(1) {
+        font-size: 10px;
+    }
+
+    .contact-via:nth-of-type(2),
+    .contact-via:nth-of-type(3) {
+        font-size: 9px;
+    }
 }
 
 @media(min-width: 460px) {
@@ -614,7 +708,7 @@
     .df-icon:nth-of-type(1) {
         top: 40%;
     }
-    
+
     .df-icon:nth-of-type(2) {
         left: 34px;
         top: 75%;
@@ -745,7 +839,7 @@
     .df-icon:nth-of-type(1) {
         top: 45%;
     }
-    
+
     .df-icon:nth-of-type(2) {
         left: 54px;
         top: 85%;
@@ -790,6 +884,46 @@
 
     .painting-icon {
         left: 5%;
+    }
+
+    .contact {
+        margin-bottom: 20px
+    }
+
+    .questions-area {
+        width: 45%;
+    }
+
+    .questions-area-header h1 {
+        font-size: 14px;
+    }
+
+    .contact-label {
+        width: 90%;
+    }
+
+    .instagram-icon,
+    .email-icon,
+    .phone-icon {
+        width: 50px;
+    }
+
+    .contact-via:nth-of-type(1) {
+        font-size: 13px;
+    }
+
+    .contact-via:nth-of-type(2) {
+        font-size: 11px;
+        transform: translateX(10%) translateY(-20%);
+    }
+
+    .contact-via:nth-of-type(3) {
+        font-size: 11px;
+        transform: translateX(-25%) translateY(-20%);
+    }
+
+    .contact-wolf {
+        width: 45%;
     }
 }
 
@@ -914,7 +1048,7 @@
         right: 8px;
         top: 60%;
     }
-    
+
     .df-icon:nth-of-type(2) {
         width: 60px;
         left: 42px;
@@ -933,7 +1067,7 @@
         width: 75%;
         line-height: 1.6;
     }
-    
+
     .pt-wolf {
         top: -30%;
         width: 55%;
@@ -958,7 +1092,7 @@
         height: auto;
         left: 5%;
     }
-    
+
     .exclamative-msg-icon {
         width: 70px;
         height: auto;
@@ -984,10 +1118,39 @@
         width: 45px;
         right: 20%;
     }
-    
+
     .painting-icon {
         width: 45px;
         left: 10%;
+    }
+
+    .questions-area-header h1 {
+        font-size: 15px;
+    }
+
+    .contact-vias {
+        margin-top: 20px;
+    }
+
+    .contact-via:nth-of-type(1) {
+        font-size: 14px;
+        transform: translateX(-30%);
+    }
+
+    .contact-via:nth-of-type(2) {
+        font-size: 12px;
+        transform: translateX(5%) translateY(-20%);
+    }
+
+    .contact-via:nth-of-type(3) {
+        font-size: 12px;
+        transform: translateX(-30%) translateY(-20%);
+    }
+
+    .instagram-icon,
+    .email-icon,
+    .phone-icon {
+        width: 50px;
     }
 }
 
@@ -1180,7 +1343,7 @@
         right: 8px;
         top: 45%;
     }
-    
+
     .df-icon:nth-of-type(2) {
         width: 90px;
         left: -125px;
@@ -1229,7 +1392,7 @@
     .faq-container {
         width: 65%;
         z-index: 1;
-        padding-right: 20px; 
+        padding-right: 20px;
     }
 
     .faq-label {
@@ -1303,6 +1466,73 @@
     .painting-icon {
         width: 65px;
         left: 32%;
+    }
+
+    .bluered-hearts {
+        width: 120%;
+        right: -10%;
+        left: unset;
+    }
+
+    .contact-content {
+        gap: 10%;
+    }
+
+    .questions-area {
+        width: 35%;
+    }
+
+    .questions-area-header {
+        text-align: right;
+    }
+
+    .contact-label {
+        width: 80%;
+    }
+
+    .questions-area {
+        position: relative;
+    }
+
+    .contact-hearts {
+        position: absolute;
+        display: unset;
+        width: 130%;
+        right: -20%;
+        top: -10%;
+    }
+
+    .questions-area-header h1 {
+        font-size: 20px;
+    }
+
+    .contact-vias {
+        margin-top: 40px;
+    }
+    
+    .contact-via:nth-of-type(1) {
+        font-size: 14px;
+        transform: translateX(-15%);
+    }
+
+    .contact-via:nth-of-type(2) {
+        font-size: 12px;
+        transform: translateX(35%) translateY(-100%);
+    }
+
+    .contact-via:nth-of-type(3) {
+        font-size: 12px;
+        transform: translateX(10%) translateY(-60%);
+    }
+    
+    .instagram-icon,
+    .email-icon,
+    .phone-icon {
+        width: 65px;
+    }
+
+    .contact-wolf {
+        width: 35%;
     }
 }
 

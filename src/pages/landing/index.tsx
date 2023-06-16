@@ -61,6 +61,14 @@ import { ReactComponent as TeacherIcon } from "../../assets/landing/teacher-trai
 import { ReactComponent as PaintingIcon } from "../../assets/landing/teacher-training/painting.svg";
 import teaInClass from "../../assets/landing/teacher-training/tea-in-class.png";
 import teacherTrainingWolf from "../../assets/landing/teacher-training/teacher-training-wolf.png";
+// Contact section assets
+import { ReactComponent as ContactLabelVector } from "../../assets/landing/contact/contact-label.svg";
+import { ReactComponent as EmailIcon } from "../../assets/landing/contact/email.svg";
+import { ReactComponent as InstagramIcon } from "../../assets/landing/contact/instagram.svg";
+import { ReactComponent as PhoneIcon } from "../../assets/landing/contact/phone.svg";
+import contactWolf from "../../assets/landing/contact/contact-wolf.png";
+import bluredHearts from "../../assets/landing/contact/blured-hearts.png";
+import contactHearts from "../../assets/landing/contact/contact-hearts.png";
 
 function Landing() {
   const [isDesktop, setIsDesktop] = useState<boolean>(
@@ -365,27 +373,83 @@ function Landing() {
 
             <p>
               Prepare-se para criar um ambiente de aprendizagem verdadeiramente
-              inclusivo com nossa <span>Capacitação: TEA em sala de aula.</span> Este
-              programa exclusivo oferece aos professores as <span>ferramentas e
-              estratégias</span> necessárias para apoiar efetivamente os alunos
-              autistas em sala de aula. Nossa capacitação abrange temas
-              essenciais, desde <span>compreender as necessidades individuais dos
-              alunos até implementar práticas inclusivas</span> que promovam a
-              participação ativa e o desenvolvimento de habilidades. Aprenda a
-              <span>adaptar seu ensino, promover interações positivas e cultivar um
-              ambiente acolhedor</span> para todos os estudantes
+              inclusivo com nossa <span>Capacitação: TEA em sala de aula.</span>{" "}
+              Este programa exclusivo oferece aos professores as{" "}
+              <span>ferramentas e estratégias</span> necessárias para apoiar
+              efetivamente os alunos autistas em sala de aula. Nossa capacitação
+              abrange temas essenciais, desde{" "}
+              <span>
+                compreender as necessidades individuais dos alunos até
+                implementar práticas inclusivas
+              </span>{" "}
+              que promovam a participação ativa e o desenvolvimento de
+              habilidades. Aprenda a
+              <span>
+                adaptar seu ensino, promover interações positivas e cultivar um
+                ambiente acolhedor
+              </span>{" "}
+              para todos os estudantes
             </p>
           </div>
 
-          <img className="tt-wolf" src={teacherTrainingWolf} alt="wolf with hand up" />
+          <img
+            className="tt-wolf"
+            src={teacherTrainingWolf}
+            alt="wolf with hand up"
+          />
 
           <div className="join-us">
-            <button className="join-us-button">
-              JUNTE-SE A NÓS!
-            </button>
+            <button className="join-us-button">JUNTE-SE A NÓS!</button>
 
             <PaintingIcon className="painting-icon" />
           </div>
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section className="contact">
+        <img
+          className="bluered-hearts"
+          src={bluredHearts}
+          alt="blured blue hearts"
+        />
+
+        <div className="contact-content">
+          <div className="questions-area">
+            <img className="contact-hearts" src={contactHearts} alt="blue hearts randomly" />
+              
+            <div className="questions-area-header">
+              <ContactLabelVector className="contact-label" />
+
+              <h1>Entre em Contato!</h1>
+            </div>
+
+            <div className="contact-vias">
+              <div className="contact-via">
+                <InstagramIcon className="instagram-icon" />
+
+                <span>@mindlab</span>
+              </div>
+
+              <div className="contact-via">
+                <PhoneIcon className="phone-icon" />
+
+                <span>(88)9970041316</span>
+              </div>
+
+              <div className="contact-via">
+                <EmailIcon className="email-icon" />
+
+                <span>mindlab@gmail.com</span>
+              </div>
+            </div>
+          </div>
+
+          <img
+            className="contact-wolf"
+            src={contactWolf}
+            alt="wolf lying down"
+          />
         </div>
       </section>
     </div>
