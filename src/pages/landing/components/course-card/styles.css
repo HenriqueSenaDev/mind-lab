@@ -1,8 +1,8 @@
 .course-card {
     position: relative;
-    height: 190px;
-    width: auto;
-    border-radius:15px;
+    width: 90%;
+    height: auto;
+    border-radius: 15px;
     cursor: pointer;
     transition: all ease 0.2s;
 }
@@ -17,7 +17,7 @@
     width: 100%;
     height: 100%;
     z-index: 1;
-    background-color: var(--primary-color);
+    background-color: #0093CE;
     opacity: 0.3;
 }
 
@@ -28,16 +28,17 @@
 
 .course-card-label {
     position: absolute;
-    bottom: 8px;
-    left: 16px;
-    right: 16px;
+    width: 85%;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
     border-radius: 9px;
     text-align: center;
     color: #FFF;
     font-family: 'Inter';
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(20px);
-    padding: 0 20px 5px 20px;
+    padding: 0 10px 5px 10px;
     z-index: 2;
 }
 
@@ -51,28 +52,29 @@
     letter-spacing: 0.5px;
 }
 
-@media(min-width: 567px) {
+@media(min-width: 400px) {
     .course-card {
-        height: 210px;
-    }
-    
-    .course-card-label span {
-        font-size: 10px;
-    }
-    
-    .course-card-label h1 {
-        font-size: 13px;
+        width: 85%;
     }
 }
 
-@media(min-width: 768px) {
+@media(min-width: 567px) {
     .course-card {
-        height: 245px;
+        width: 75%;
+    }
+
+    .course-card-label span {
+        font-size: 10px;
+    }
+
+    .course-card-label h1 {
+        font-size: 14px;
     }
 }
 
 @media(min-width: 992px) {
     .course-card {
         display: inline-flex;
+        width: 100%;
     }
 }

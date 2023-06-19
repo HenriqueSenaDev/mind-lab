@@ -2,171 +2,6 @@
     overflow: hidden;
 }
 
-.showcase {
-    padding: 32px 20px;
-    display: flex;
-    position: relative;
-    margin-bottom: 15%;
-}
-
-.showcase button {
-    font-family: 'Inter';
-    color: var(--primary-color);
-    letter-spacing: 2px;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    transition: all ease 0.2s;
-}
-
-.showcase button:hover {
-    background-color: #f0eeee;
-}
-
-.login-button {
-    position: absolute;
-    top: 20px;
-    right: 22px;
-    font-size: 14px;
-    z-index: 2;
-    background-color: #FBFBFB;
-}
-
-.login-button,
-.sign-up-button {
-    padding: 5px 27px;
-    border-radius: 10px;
-    font-weight: 600;
-}
-
-.showcase-logo {
-    transform: translateX(-10px);
-    width: 150%;
-}
-
-.showcase-description {
-    width: 50%;
-    z-index: 2;
-    max-width: 290px;
-}
-
-.showcase-description-text {
-    display: flex;
-    width: 100%;
-    gap: 6px;
-    position: relative;
-    margin-top: 20px;
-}
-
-.showcase-blue-bar {
-    min-width: 8px;
-    background-color: var(--primary-color);
-}
-
-.showcase-description-text p {
-    font-size: 12px;
-    font-weight: 600;
-    text-align: justify;
-    line-height: 1.6;
-}
-
-.showcase-description-text span {
-    color: var(--primary-color);
-}
-
-.showcase-images {
-    position: relative;
-    top: 0;
-    right: 0;
-}
-
-.sc-wolf-img,
-.sc-orange-img,
-.sc-blue-img {
-    position: absolute;
-    height: auto;
-}
-
-.sc-wolf-img {
-    top: 15%;
-    right: -50vw;
-    width: 65vw;
-    z-index: 3;
-}
-
-.sc-blue-img {
-    width: 270px;
-    top: -30%;
-    right: -80vw;
-    transform: rotate(110deg);
-    z-index: 1;
-}
-
-.sc-orange-img {
-    width: 270px;
-    right: -75vw;
-    transform: rotate(360deg);
-}
-
-.sign-up-wrapper {
-    position: absolute;
-    bottom: -5%;
-    right: 50%;
-    transform: translateX(50%);
-    width: 270px;
-    border-radius: 10px;
-    z-index: 4;
-}
-
-.sign-up-button {
-    font-size: 16px;
-    background-color: transparent;
-    font-weight: 700;
-}
-
-.our-courses {
-    position: relative;
-    display: flex;
-    justify-content: end;
-    margin-bottom: 150px;
-}
-
-.courses-wolf-img {
-    position: absolute;
-    width: 50%;
-    left: 0;
-    top: -50%;
-}
-
-.courses-area {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 22px;
-    transform: translateY(4vh);
-    position: relative;
-}
-
-.courses-cards {
-    transform: translateX(3vw);
-}
-
-.courses-right-arrow,
-.courses-left-arrow {
-    position: absolute;
-    top: 30%;
-}
-
-.courses-right-arrow {
-    right: -28%;
-}
-
-.courses-left-arrow {
-    left: -28%;
-    transform: scaleX(-1);
-}
-
 .multimodals {
     position: relative;
     margin-bottom: 40px;
@@ -623,19 +458,6 @@
 }
 
 @media(min-width: 400px) {
-    .sc-wolf-img {
-        top: 20%;
-        max-width: 280px;
-    }
-
-    .sc-orange-img {
-        right: -65vw;
-    }
-
-    .sc-blue-img {
-        top: -28%;
-    }
-
     .mm-wolf-img {
         width: 300px;
     }
@@ -697,10 +519,6 @@
 }
 
 @media(min-width: 500px) {
-    .sc-blue-img {
-        right: -75vw;
-    }
-
     .personalization {
         margin-bottom: 360px;
     }
@@ -762,54 +580,6 @@
 }
 
 @media(min-width: 567px) {
-    .showcase {
-        padding: 32px 28px;
-        margin-bottom: 18%;
-    }
-
-    .showcase-logo {
-        width: 125%;
-    }
-
-    .sc-wolf-img {
-        width: 310px;
-        max-width: unset;
-    }
-
-    .sc-blue-img {
-        width: 290px;
-        top: -40%;
-        right: -68vw;
-    }
-
-    .sc-orange-img {
-        width: 300px;
-        right: -60vw;
-    }
-
-    .sign-up-wrapper {
-        bottom: -18%;
-    }
-
-    .courses-area {
-        width: 75%;
-        gap: 32px;
-    }
-
-    .courses-cards {
-        transform: unset;
-    }
-
-    .courses-right-arrow {
-        right: 15%;
-        top: 50%;
-    }
-
-    .courses-left-arrow {
-        left: 15%;
-        top: 50%;
-    }
-
     .multimodals {
         margin-bottom: 50px;
     }
@@ -961,54 +731,6 @@
 }
 
 @media(min-width: 768px) {
-    .showcase {
-        padding: 32px 42px;
-    }
-
-    .showcase-logo {
-        width: 340px;
-    }
-
-    .showcase-description-text p {
-        font-size: 14px;
-    }
-
-    .sc-wolf-img {
-        width: 360px;
-        top: 10%;
-        right: -48vw;
-    }
-
-    .sc-orange-img {
-        right: -65vw;
-        width: 420px;
-        top: -40%;
-    }
-
-    .sc-blue-img {
-        width: 340px;
-        top: -55%;
-        right: -68vw;
-    }
-
-    .sign-up-wrapper {
-        bottom: -12%;
-    }
-
-    .courses-wolf-img {
-        transform: scale(1.4);
-        left: 10%;
-    }
-
-    .courses-area {
-        gap: 52px;
-        transform: unset;
-    }
-
-    .courses-label-img {
-        transform: scale(1.4);
-    }
-
     .multimodals {
         margin-bottom: 60px;
     }
@@ -1155,93 +877,6 @@
 }
 
 @media(min-width: 992px) {
-    .showcase {
-        height: 100vh;
-        padding: 42px 52px 42px 52px;
-        margin-bottom: 0;
-    }
-
-    .login-button {
-        font-size: 1.05rem;
-        padding: 6px 27px;
-        backdrop-filter: blur(20px);
-    }
-
-    .showcase-description {
-        max-width: unset;
-        align-self: center;
-        transform: translateY(-8vh);
-    }
-
-    .showcase-logo {
-        width: 75%;
-        transform: translateX(2vw);
-    }
-
-    .showcase-description-text {
-        gap: 22px;
-        width: 80%;
-    }
-
-    .showcase-description-text p {
-        font-size: 15px;
-    }
-
-    .sc-wolf-img {
-        width: unset;
-        height: 80vh;
-        top: 5vh;
-        right: -36vw;
-    }
-
-    .sc-blue-img,
-    .sc-orange-img {
-        transform: rotate(0);
-        height: 100vh;
-    }
-
-    .sc-blue-img {
-        top: -10%;
-        right: -30vw;
-        width: 30vw;
-    }
-
-    .sc-orange-img {
-        top: -5%;
-        width: 25vw;
-        right: -48vw;
-    }
-
-    .sign-up-wrapper {
-        bottom: 12%;
-        width: unset;
-    }
-
-    .sign-up-button {
-        font-size: 1.4rem;
-        padding: 13px 27px;
-        z-index: 4;
-        backdrop-filter: blur(20px);
-        background: rgba(251, 251, 251, 0.5);
-        border-radius: 18px;
-    }
-
-    .our-courses {
-        margin-bottom: 70px;
-    }
-
-    .courses-cards {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-gap: 40px;
-    }
-
-    .courses-wolf-img {
-        transform: scale(1.7);
-        left: 16%;
-        top: -10%;
-    }
-
     .multimodals {
         margin-bottom: 70px;
     }
