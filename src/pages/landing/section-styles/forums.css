@@ -1,0 +1,184 @@
+.discussion-forums {
+    position: relative;
+    height: 350px;
+    margin-bottom: 10%;
+}
+
+.discussion-forums-label {
+    position: absolute;
+    width: 70%;
+    height: auto;
+    right: 10%;
+}
+
+.df-wolf {
+    width: 55%;
+    position: absolute;
+    left: -10%;
+    top: 4%;
+}
+
+.discussion-forums-sample {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    right: 20px;
+    top: 10%;
+}
+
+.mobile-forum-sample {
+    height: auto;
+    position: absolute;
+    width: 100%;
+}
+
+.desktop-forum-sample {
+    display: none;
+}
+
+.df-icon {
+    position: absolute;
+    height: auto;
+}
+
+.df-icon:nth-of-type(1) {
+    width: 30px;
+    right: -5%;
+    top: 25%;
+    rotate: -12deg;
+}
+
+.df-icon:nth-of-type(2) {
+    width: 35px;
+    left: -5%;
+    top: 50%;
+}
+
+@media(min-width: 400px) {
+    .discussion-forums {
+        margin-bottom: 25%;
+    }
+
+    .df-icon:nth-of-type(1) {
+        width: 35px;
+        right: -5%;
+        top: 25%;
+    }
+    
+    .df-icon:nth-of-type(2) {
+        width: 40px;
+        left: -5%;
+        top: 60%;
+    }
+}
+
+@media(min-width: 500px) {
+    .df-icon:nth-of-type(1) {
+        top: 30%;
+    }
+
+    .df-icon:nth-of-type(2) {
+        top: 70%;    
+    }
+
+    .discussion-forums {
+        margin-bottom: 30%;
+    }
+}
+
+
+@media(min-width: 567px) {
+    .discussion-forums {
+        margin-bottom: 45%;
+    }
+
+    .discussion-forums-sample {
+        margin-top: 5%;
+    }
+
+    .df-icon:nth-of-type(1) {
+        width: 40px;
+        top: 35%;
+        right: 5%;
+    }
+    
+    .df-icon:nth-of-type(2) {
+        width: 45px;
+        top: 85%;
+    }
+}
+
+@media(min-width: 650px) {
+    .discussion-forums {
+        margin-bottom: 50%;
+    }
+}
+
+@media(min-width: 768px) {
+    .discussion-forums {
+        margin-bottom: 60%;
+    }
+
+    .discussion-forums-label {
+        width: 60%;
+        transform: translateX(-10%);
+    }
+
+    .df-icon:nth-of-type(1) {
+        width: 50px;
+        right: 8px;
+        top: 60%;
+    }
+
+    .df-icon:nth-of-type(2) {
+        width: 60px;
+        top: 120%;
+    }
+}
+
+@media(min-width: 992px) {
+    .discussion-forums {
+        margin-bottom: 25%;
+    }
+
+    .discussion-forums-label {
+        width: 45%;
+        transform: translateX(-20%);
+        top: 40%;
+    }
+
+    .df-wolf {
+        width: 32%;
+        left: -2%;
+        top: 0%;
+    }
+
+    .discussion-forums-sample {
+        width: 70%;
+    }
+
+    .mobile-forum-sample {
+        display: none;
+    }
+
+    .desktop-forum-sample {
+        display: unset;
+        position: absolute;
+        width: 90%;
+        top: 40%;
+        left: 5%;
+        right: 5%;
+    }
+
+    .df-icon:nth-of-type(1) {
+        width: 70px;
+        right: 3%;
+        top: 30%;
+    }
+
+    .df-icon:nth-of-type(2) {
+        width: 90px;
+        left: 0%;
+        top: 140%;
+    }
+}

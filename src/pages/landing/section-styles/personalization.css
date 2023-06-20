@@ -1,0 +1,159 @@
+.personalization {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 260px;
+}
+
+.personalization-label {
+    width: 70%;
+    height: auto;
+}
+
+.personalization p {
+    width: 85%;
+    text-align: justify;
+    font-size: 12px;
+    color: #535353;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+.personalization p span {
+    color: #0093CE;
+    font-weight: 700;
+}
+
+.personalization-images {
+    position: relative;
+}
+
+.personalization-first-palete,
+.personalization-second-palete,
+.personalization-third-palete {
+    position: absolute;
+    height: auto;
+}
+
+.personalization-first-palete {
+    width: 50vw;
+    top: 80px;
+    right: -5px;
+    z-index: 1;
+}
+
+.personalization-second-palete {
+    width: 45vw;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.personalization-third-palete {
+    width: 50vw;
+    left: -5px;
+    top: 60px;
+}
+
+@media(min-width: 400px) {
+    .personalization {
+        margin-bottom: 320px;
+    }
+}
+
+@media(min-width: 500px) {
+    .personalization {
+        margin-bottom: 360px;
+    }
+}
+
+@media(min-width: 567px) {
+    .personalization {
+        gap: 18px;
+        margin-bottom: 65%;
+    }
+
+    .personalization p {
+        font-size: 14px;
+    }
+
+    .personalization-label {
+        width: 55%;
+    }
+
+    .personalization-first-palete,
+    .personalization-third-palete {
+        width: 45vw;
+    }
+    
+    .personalization-second-palete {
+        width: 40vw;
+    }
+}
+
+@media(min-width: 768px) {
+    .personalization {
+        margin-bottom: 55%;
+    }
+
+    .personalization-label {
+        width: 50vw;
+    }
+
+    .personalization-first-palete,
+    .personalization-third-palete {
+        width: 40vw;
+    }
+    
+    .personalization-second-palete {
+        width: 35vw;
+    }
+}
+
+@media(min-width: 992px) {
+    .personalization {
+        margin-bottom: 0;
+    }
+
+    .personalization-label {
+        width: 35%;
+        align-self: flex-start;
+        transform: translateX(10%);
+    }
+
+    .personalization p {
+        width: 95%;
+        font-size: 18px;
+    }
+
+    .personalization-images {
+        display: flex;
+        width: 70%;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .personalization-first-palete,
+    .personalization-second-palete,
+    .personalization-third-palete {
+        position: static;
+        transform: unset;
+    }
+
+    .personalization-first-palete {
+        width: 40%;
+        transform: translateX(5%);
+    }
+
+    .personalization-second-palete {
+        width: 35%;
+    }
+
+    .personalization-third-palete {
+        width: 40%;
+        transform: translateX(-5%);
+    }
+}

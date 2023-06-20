@@ -1,12 +1,12 @@
 .faq-item-card {
     width: 95%;
+    height: 250px;
     padding: 12px 10px;
     border-radius: 10px;
     background-color: #FFF;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     max-width: 210px;
 }
 
@@ -59,6 +59,18 @@
     }
 }
 
+@media(min-width: 768px) {
+    .faq-item-card {
+        max-width: 280px;
+        height: 260px;
+    }
+
+    .faq-item-card p {
+        font-size: 14px;
+        line-height: 1.1;
+    }
+}
+
 @media(min-width: 992px) {
     .faq-item-card {
         display: inline-flex;
@@ -67,5 +79,12 @@
     .faq-item-question {
         padding: 18px 20px;
         margin-bottom: 22px;
+    }
+}
+
+@media(min-width: 1440px) {
+    .faq-item-card p {
+        font-size: 15px;
+        line-height: 1.1;
     }
 }

@@ -1,74 +1,84 @@
 import { useState } from "react";
-import { ReactComponent as Logo } from "../../assets/common/logo.svg";
-import { ReactComponent as WolfVector } from "../../assets/landing/showcase-wolf.svg";
-import { ReactComponent as BlueVector } from "../../assets/landing/showcase-blue.svg";
-import { ReactComponent as OrangeVector } from "../../assets/landing/showcase-orange.svg";
-import { ReactComponent as WolfCoursesVector } from "../../assets/landing/our-courses.svg";
-import { ReactComponent as CoursesLabelVector } from "../../assets/landing/our-courses-label.svg";
 import { ReactComponent as Arrow } from "../../assets/common/arrow.svg";
-import { ReactComponent as MultimodalsLabel } from "../../assets/landing/multimodals-label.svg";
 import CourseCard from "./components/course-card";
 import MultimodalItem from "./components/multimodal-item";
 import FaqItem from "./components/faq-item";
 import "./styles.css";
 
+// Showcase section assets
+import showcaseLogo from "../../assets/landing/showcase/showcase-logo.png";
+import showcaseWolfImg from "../../assets/landing/showcase/showcase-wolf.png";
+import blueShape from "../../assets/landing/showcase/blue-shape.png";
+import orangeShape from "../../assets/landing/showcase/orange-shape.png";
+import "./section-styles/showcase.css";
 // Our Courses section assets
-import multimodalWolfImg from "../../assets/landing/multimodals.png";
-import planning from "../../assets/landing/courses/planning.png";
-import design from "../../assets/landing/courses/design.png";
-import programming from "../../assets/landing/courses/programming.png";
-import frontend from "../../assets/landing/courses/frontend.png";
-import backend from "../../assets/landing/courses/backend.png";
-import pixelArt from "../../assets/landing/courses/pixel-art.png";
-import scratch from "../../assets/landing/courses/scratch.png";
-import cientificMetodology from "../../assets/landing/courses/cientific-metodology.png";
+import { ReactComponent as CoursesLabelVector } from "../../assets/landing/our-courses/our-courses-label.svg";
+import ourCoursesWolfImg from "../../assets/landing/our-courses/our-courses-wolf.png";
+import planning from "../../assets/landing/our-courses/cards/planning.png";
+import design from "../../assets/landing/our-courses/cards/design.png";
+import programming from "../../assets/landing/our-courses/cards/programming.png";
+import frontend from "../../assets/landing/our-courses/cards/frontend.png";
+import backend from "../../assets/landing/our-courses/cards/backend.png";
+import pixelArt from "../../assets/landing/our-courses/cards/pixel-art.png";
+import scratch from "../../assets/landing/our-courses/cards/scratch.png";
+import cientificMetodology from "../../assets/landing/our-courses/cards/cientific-metodology.png";
+import "./section-styles/our-courses.css";
 // Multimodals section assets
-import { ReactComponent as VideosLabelVector } from "../../assets/landing/multimodals/videos-label.svg";
-import { ReactComponent as VideosIconVector } from "../../assets/landing/multimodals/videos-icon.svg";
-import { ReactComponent as ImagensLabelVector } from "../../assets/landing/multimodals/images-label.svg";
-import { ReactComponent as ImagensIconVector } from "../../assets/landing/multimodals/images-icon.svg";
-import { ReactComponent as TextsLabelVector } from "../../assets/landing/multimodals/texts-label.svg";
-import { ReactComponent as TextsIconVector } from "../../assets/landing/multimodals/texts-icon.svg";
-import { ReactComponent as AudioLabelVector } from "../../assets/landing/multimodals/audio-label.svg";
-import { ReactComponent as AudioIconVector } from "../../assets/landing/multimodals/audio-icon.svg";
-import { ReactComponent as ForumsLabelVector } from "../../assets/landing/multimodals/forums-label.svg";
-import { ReactComponent as ForumsIconVector } from "../../assets/landing/multimodals/forums-icon.svg";
-import { ReactComponent as AvaliationsLabelVector } from "../../assets/landing/multimodals/avaliations-label.svg";
-import { ReactComponent as AvaliationsIconVector } from "../../assets/landing/multimodals/avaliations-icon.svg";
+import { ReactComponent as MultimodalsLabel } from "../../assets/landing/multimodals/multimodals-label.svg";
+import multimodalWolfImg from "../../assets/landing/multimodals/multimodals-wolf.png";
+import { ReactComponent as VideosLabelVector } from "../../assets/landing/multimodals/multimodals-items/videos-label.svg";
+import { ReactComponent as VideosIconVector } from "../../assets/landing/multimodals/multimodals-items/videos-icon.svg";
+import { ReactComponent as ImagensLabelVector } from "../../assets/landing/multimodals/multimodals-items/images-label.svg";
+import { ReactComponent as ImagensIconVector } from "../../assets/landing/multimodals/multimodals-items/images-icon.svg";
+import { ReactComponent as TextsLabelVector } from "../../assets/landing/multimodals/multimodals-items/texts-label.svg";
+import { ReactComponent as TextsIconVector } from "../../assets/landing/multimodals/multimodals-items/texts-icon.svg";
+import { ReactComponent as AudioLabelVector } from "../../assets/landing/multimodals/multimodals-items/audio-label.svg";
+import { ReactComponent as AudioIconVector } from "../../assets/landing/multimodals/multimodals-items/audio-icon.svg";
+import { ReactComponent as ForumsLabelVector } from "../../assets/landing/multimodals/multimodals-items/forums-label.svg";
+import { ReactComponent as ForumsIconVector } from "../../assets/landing/multimodals/multimodals-items/forums-icon.svg";
+import { ReactComponent as AvaliationsLabelVector } from "../../assets/landing/multimodals/multimodals-items/avaliations-label.svg";
+import { ReactComponent as AvaliationsIconVector } from "../../assets/landing/multimodals/multimodals-items/avaliations-icon.svg";
+import "./section-styles/multimodals.css";
 // Personalization section assets
 import { ReactComponent as PersonalizationLabelVector } from "../../assets/landing/personalization/personalization-label.svg";
 import personalizationFirstPalete from "../../assets/landing/personalization/palete-1.png";
 import personalizationSecondPalete from "../../assets/landing/personalization/palete-2.png";
 import personalizationThirdPalete from "../../assets/landing/personalization/palete-3.png";
+import "./section-styles/personalization.css";
 // Discussion Forums section assets
 import { ReactComponent as DiscussionForumsLabelVector } from "../../assets/landing/forums/forums-label.svg";
 import { ReactComponent as HeartMessageIcon } from "../../assets/landing/forums/heart-message.svg";
 import discussionForumsWolfImg from "../../assets/landing/forums/forums-wolf.png";
 import mobileForumSample from "../../assets/landing/forums/mobile-forum.png";
 import desktopForumSample from "../../assets/landing/forums/desktop-forum.png";
+import "./section-styles/forums.css";
 // Progress Tracking section assets
 import { ReactComponent as ProgressTrackingLabelVector } from "../../assets/landing/progress-tracking/progress-tracking-label.svg";
 import { ReactComponent as BarGraphIcon } from "../../assets/landing/progress-tracking/bar-graph.svg";
-import progressTrackingWolf from "../../assets/landing/progress-tracking/progress-tracking-wolf.png";
+import progressTrackingWolfImg from "../../assets/landing/progress-tracking/progress-tracking-wolf.png";
 import porgressGraph from "../../assets/landing/progress-tracking/progress-graph.png";
-// FAQ session assets
+import "./section-styles/progress-tracking.css";
+// FAQ session assets 
 import { ReactComponent as FaqLabelVector } from "../../assets/landing/faq/faq-label.svg";
 import { ReactComponent as ExclamativeMessageIcon } from "../../assets/landing/faq/exclamative-message.svg";
 import { ReactComponent as InterrogativeMessageIcon } from "../../assets/landing/faq/interrogative-message.svg";
-import faqWolf from "../../assets/landing/faq/faq-wolf.png";
+import faqWolfImg from "../../assets/landing/faq/faq-wolf.png";
+import "./section-styles/faq.css";
 // Teacher Training section assets
 import { ReactComponent as TeacherIcon } from "../../assets/landing/teacher-training/teacher.svg";
 import { ReactComponent as PaintingIcon } from "../../assets/landing/teacher-training/painting.svg";
 import teaInClass from "../../assets/landing/teacher-training/tea-in-class.png";
-import teacherTrainingWolf from "../../assets/landing/teacher-training/teacher-training-wolf.png";
+import teacherTrainingWolfImg from "../../assets/landing/teacher-training/teacher-training-wolf.png";
+import "./section-styles/teacher-training.css";
 // Contact section assets
 import { ReactComponent as ContactLabelVector } from "../../assets/landing/contact/contact-label.svg";
 import { ReactComponent as EmailIcon } from "../../assets/landing/contact/email.svg";
 import { ReactComponent as InstagramIcon } from "../../assets/landing/contact/instagram.svg";
 import { ReactComponent as PhoneIcon } from "../../assets/landing/contact/phone.svg";
-import contactWolf from "../../assets/landing/contact/contact-wolf.png";
+import contactWolfImg from "../../assets/landing/contact/contact-wolf.png";
 import bluredHearts from "../../assets/landing/contact/blured-hearts.png";
 import contactHearts from "../../assets/landing/contact/contact-hearts.png";
+import "./section-styles/contact.css";
 
 function Landing() {
   const [isDesktop, setIsDesktop] = useState<boolean>(
@@ -150,7 +160,7 @@ function Landing() {
         <button className="login-button">Login</button>
 
         <div className="showcase-description">
-          <Logo className="showcase-logo" />
+          <img className="showcase-logo" src={showcaseLogo} alt="mindlab logo" />
 
           <div className="showcase-description-text">
             <div className="showcase-blue-bar" />
@@ -167,11 +177,11 @@ function Landing() {
         </div>
 
         <div className="showcase-images">
-          <WolfVector className="sc-wolf-img" />
+          <img className="sc-wolf-img" src={showcaseWolfImg} alt="showcase wolf" />
 
-          <BlueVector className="sc-blue-img" />
+          <img className="sc-blue-img" src={blueShape} alt="blue shape" />
 
-          <OrangeVector className="sc-orange-img" />
+          <img className="sc-orange-img" src={orangeShape} alt="orange shape" />
         </div>
 
         <div className="sign-up-wrapper">
@@ -181,7 +191,7 @@ function Landing() {
 
       {/* Our Courses */}
       <section className="our-courses">
-        <WolfCoursesVector className="courses-wolf-img" />
+        <img className="courses-wolf-img" src={ourCoursesWolfImg} alt="our courses wolf" />
 
         <div className="courses-area">
           <CoursesLabelVector className="courses-label-img" />
@@ -317,14 +327,14 @@ function Landing() {
 
         <img
           className="pt-wolf"
-          src={progressTrackingWolf}
+          src={progressTrackingWolfImg}
           alt="progress tracking wolf"
         />
       </section>
 
       {/* FAQ */}
       <section className="faq">
-        <img className="faq-wolf" src={faqWolf} alt="faq wolf" />
+        <img className="faq-wolf" src={faqWolfImg} alt="faq wolf" />
 
         <div className="faq-container">
           <FaqLabelVector className="faq-label" />
@@ -383,7 +393,7 @@ function Landing() {
                 implementar práticas inclusivas
               </span>{" "}
               que promovam a participação ativa e o desenvolvimento de
-              habilidades. Aprenda a
+              habilidades. Aprenda a{" "}
               <span>
                 adaptar seu ensino, promover interações positivas e cultivar um
                 ambiente acolhedor
@@ -394,7 +404,7 @@ function Landing() {
 
           <img
             className="tt-wolf"
-            src={teacherTrainingWolf}
+            src={teacherTrainingWolfImg}
             alt="wolf with hand up"
           />
 
@@ -447,7 +457,7 @@ function Landing() {
 
           <img
             className="contact-wolf"
-            src={contactWolf}
+            src={contactWolfImg}
             alt="wolf lying down"
           />
         </div>
