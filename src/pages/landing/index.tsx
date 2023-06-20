@@ -10,7 +10,7 @@ import showcaseLogo from "../../assets/landing/showcase/showcase-logo.png";
 import showcaseWolfImg from "../../assets/landing/showcase/showcase-wolf.png";
 import blueShape from "../../assets/landing/showcase/blue-shape.png";
 import orangeShape from "../../assets/landing/showcase/orange-shape.png";
-import "./showcase.css";
+import "./section-styles/showcase.css";
 // Our Courses section assets
 import { ReactComponent as CoursesLabelVector } from "../../assets/landing/our-courses/our-courses-label.svg";
 import ourCoursesWolfImg from "../../assets/landing/our-courses/our-courses-wolf.png";
@@ -22,7 +22,7 @@ import backend from "../../assets/landing/our-courses/cards/backend.png";
 import pixelArt from "../../assets/landing/our-courses/cards/pixel-art.png";
 import scratch from "../../assets/landing/our-courses/cards/scratch.png";
 import cientificMetodology from "../../assets/landing/our-courses/cards/cientific-metodology.png";
-import "./our-courses.css";
+import "./section-styles/our-courses.css";
 // Multimodals section assets
 import { ReactComponent as MultimodalsLabel } from "../../assets/landing/multimodals/multimodals-label.svg";
 import multimodalWolfImg from "../../assets/landing/multimodals/multimodals-wolf.png";
@@ -38,32 +38,38 @@ import { ReactComponent as ForumsLabelVector } from "../../assets/landing/multim
 import { ReactComponent as ForumsIconVector } from "../../assets/landing/multimodals/multimodals-items/forums-icon.svg";
 import { ReactComponent as AvaliationsLabelVector } from "../../assets/landing/multimodals/multimodals-items/avaliations-label.svg";
 import { ReactComponent as AvaliationsIconVector } from "../../assets/landing/multimodals/multimodals-items/avaliations-icon.svg";
+import "./section-styles/multimodals.css";
 // Personalization section assets
 import { ReactComponent as PersonalizationLabelVector } from "../../assets/landing/personalization/personalization-label.svg";
 import personalizationFirstPalete from "../../assets/landing/personalization/palete-1.png";
 import personalizationSecondPalete from "../../assets/landing/personalization/palete-2.png";
 import personalizationThirdPalete from "../../assets/landing/personalization/palete-3.png";
+import "./section-styles/personalization.css";
 // Discussion Forums section assets
 import { ReactComponent as DiscussionForumsLabelVector } from "../../assets/landing/forums/forums-label.svg";
 import { ReactComponent as HeartMessageIcon } from "../../assets/landing/forums/heart-message.svg";
 import discussionForumsWolfImg from "../../assets/landing/forums/forums-wolf.png";
 import mobileForumSample from "../../assets/landing/forums/mobile-forum.png";
 import desktopForumSample from "../../assets/landing/forums/desktop-forum.png";
+import "./section-styles/forums.css";
 // Progress Tracking section assets
 import { ReactComponent as ProgressTrackingLabelVector } from "../../assets/landing/progress-tracking/progress-tracking-label.svg";
 import { ReactComponent as BarGraphIcon } from "../../assets/landing/progress-tracking/bar-graph.svg";
 import progressTrackingWolfImg from "../../assets/landing/progress-tracking/progress-tracking-wolf.png";
 import porgressGraph from "../../assets/landing/progress-tracking/progress-graph.png";
-// FAQ session assets
+import "./section-styles/progress-tracking.css";
+// FAQ session assets 
 import { ReactComponent as FaqLabelVector } from "../../assets/landing/faq/faq-label.svg";
 import { ReactComponent as ExclamativeMessageIcon } from "../../assets/landing/faq/exclamative-message.svg";
 import { ReactComponent as InterrogativeMessageIcon } from "../../assets/landing/faq/interrogative-message.svg";
 import faqWolfImg from "../../assets/landing/faq/faq-wolf.png";
+import "./section-styles/faq.css";
 // Teacher Training section assets
 import { ReactComponent as TeacherIcon } from "../../assets/landing/teacher-training/teacher.svg";
 import { ReactComponent as PaintingIcon } from "../../assets/landing/teacher-training/painting.svg";
 import teaInClass from "../../assets/landing/teacher-training/tea-in-class.png";
 import teacherTrainingWolfImg from "../../assets/landing/teacher-training/teacher-training-wolf.png";
+import "./section-styles/teacher-training.css";
 // Contact section assets
 import { ReactComponent as ContactLabelVector } from "../../assets/landing/contact/contact-label.svg";
 import { ReactComponent as EmailIcon } from "../../assets/landing/contact/email.svg";
@@ -72,6 +78,7 @@ import { ReactComponent as PhoneIcon } from "../../assets/landing/contact/phone.
 import contactWolfImg from "../../assets/landing/contact/contact-wolf.png";
 import bluredHearts from "../../assets/landing/contact/blured-hearts.png";
 import contactHearts from "../../assets/landing/contact/contact-hearts.png";
+import "./section-styles/contact.css";
 
 function Landing() {
   const [isDesktop, setIsDesktop] = useState<boolean>(
@@ -386,7 +393,7 @@ function Landing() {
                 implementar práticas inclusivas
               </span>{" "}
               que promovam a participação ativa e o desenvolvimento de
-              habilidades. Aprenda a
+              habilidades. Aprenda a{" "}
               <span>
                 adaptar seu ensino, promover interações positivas e cultivar um
                 ambiente acolhedor
