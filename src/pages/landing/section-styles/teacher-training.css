@@ -33,7 +33,7 @@
 }
 
 .tea-in-class-img {
-    width: 115%;
+    width: 90%;
     transform: translateX(-30%);
 }
 
@@ -42,11 +42,10 @@
 }
 
 .teacher-training-content p {
-    font-size: 10px;
+    font-size: 12px;
     text-align: justify;
     color: #535353;
-    padding: 0 15px;
-    transform: translateY(-5%);
+    padding: 0 10px;
     font-weight: 500;
     line-height: 0.9;
 }
@@ -58,10 +57,10 @@
 
 .tt-wolf {
     position: absolute;
-    width: 60%;
+    width: 70%;
     height: auto;
     top: -3%;
-    right: -10%;
+    right: -25%;
 }
 
 .join-us {
@@ -69,7 +68,7 @@
     display: flex;
     align-items: baseline;
     justify-content: center;
-    top: 90%;
+    top: 80%;
     right: 0;
     width: 45%;
 }
@@ -103,19 +102,40 @@
     z-index: 1;
 }
 
+@media(min-width: 330px) {
+    .tea-in-class-img {
+        width: 100%;
+    }
+
+    .tt-wolf {
+        width: 65%;
+        right: -20%;
+    }
+
+    .join-us {
+        top: 85%;
+    }
+}
+
 @media(min-width: 400px) {
     .teacher-icon {
         right: 15%;
     }
 
+    .tea-in-class-img {
+        width: 115%;
+    }
+
     .teacher-training-content p {
         font-size: 12px;
         padding: 0 20px 0 15px;
-        line-height: 0.9;
+        line-height: 1;
     }
 
-    .join-us {
-        top: 85%;
+    .tt-wolf {
+        width: 60%;
+        right: -10%;
+        top: 0%;
     }
 }
 
@@ -153,9 +173,17 @@
         right: 15%;
     }
 
+    .teacher-training-content p {
+        font-size: 14px;
+    }
+
     .tt-wolf {
         width: 55%;
         right: -8%
+    }
+    
+    .join-us {
+        top: 85%;
     }
 
     .painting-icon {
@@ -247,6 +275,7 @@
         width: 80%;
         display: flex;
         margin-top: 6%;
+        transform: translateY(-5%);
     }
 
     .teacher-training-content p {
@@ -267,7 +296,7 @@
     }
 
     .join-us {
-        top: 100%;
+        top: 110%;
         width: 100%;
     }
 

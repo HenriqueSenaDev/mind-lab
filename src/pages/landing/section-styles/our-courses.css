@@ -43,21 +43,21 @@
 }
 
 .courses-right-arrow {
-    right: -28%;
+    right: -45px;
 }
 
 .courses-left-arrow {
-    left: -28%;
+    left: -45px;
     transform: scaleX(-1);
 }
 
 @media(min-width: 500px) {
     .courses-right-arrow {
-        right: -20%;
+        right: -40px;
     }
 
     .courses-left-arrow {
-        left: -20%;
+        left: -40px;
     }
 }
 
