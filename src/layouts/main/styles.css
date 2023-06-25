@@ -1,0 +1,35 @@
+.main-layout {
+    height: 100vh;
+    position: relative;
+}
+
+.main-layout-content {
+    min-height: 100vh;
+}
+
+.mobile-header {
+    position: relative;
+    padding: 24px 20px 0 20px;
+}
+
+.mobile-header-user-photo {
+    width: 40px;
+}
+
+.mobile-header-logo {
+    height: 50px;
+    width: auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media(min-width: 992px) {
+    .main-layout {
+        display: flex;
+    }
+
+    .mobile-header {
+        display: none;
+    }
+}
