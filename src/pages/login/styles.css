@@ -1,0 +1,242 @@
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: none;
+}
+
+.login-image-wolf {
+    display: none;
+}
+
+.login-box {
+    background-color: rgba(251, 251, 251, 0.75);
+    backdrop-filter: blur(15px);
+    display: flex;
+    position: relative;
+    z-index: 2;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 587px;
+    width: 100%;
+    margin: 10%;
+    border-radius: 30px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.login-image-mobile {
+    position: absolute;
+    top: 15px;
+}
+
+.login-image-desktop {
+    display: none;
+}
+
+.login-label {
+    color: rgba(0, 147, 206, 1);
+    font-size: 13px;
+    margin-left: 15px;
+}
+
+.login-input-text {
+    height: 40px;
+    width: 220px;
+    border-radius: 20px;
+    border: none;
+    color: rgba(0, 147, 206, 1);
+    box-shadow: 0px 0px 44px rgba(0, 0, 0, 0.1);
+}
+
+.login-form-usuario {
+    margin-bottom: 25px;
+}
+
+.login-esqueceu-senha {
+    font-size: 9px;
+    color: rgba(0, 147, 206, 0.7);
+    margin-left: 15px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.login-form-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateY(70px);
+}
+
+.login-button {
+    color: rgba(0, 147, 206, 1);
+    background-color: white;
+    font-size: 20px;
+    font-weight: bold;
+    height: 50px;
+    width: 190px;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0px 0px 44px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: rgba(0, 147, 206, 1);
+    color: white;
+    transition: 200ms;
+}
+
+.login-cadastro {
+    font-size: 8px;
+    color: rgba(0, 147, 206, 1);
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(90px);
+}
+
+.login-spot-mobile {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+}
+
+.login-spot-1 {
+    position: absolute;
+    top: 0px;
+    left: 0;
+}
+
+.login-spot-2 {
+    position: absolute;
+    top: 60px;
+    right: 0;
+}
+
+.login-spot-3 {
+    position: absolute;
+    top: 300px;
+}
+
+.login-spot-4 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.login-spot-5 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+@media (min-width: 480px) {
+    .login-input-text {
+        height: 40px;
+        width: 270px;
+        border-radius: 20px;
+    }
+}
+
+@media (min-width: 576px) {
+    .login-box {
+        height: 650px;
+        width: 100%;
+        margin: 15% 0 15% 0;
+        max-width: 500px;
+    }
+
+    .login-image-mobile {
+        width: 400px;
+    }
+
+    form {
+        transform: translateY(110px);
+    }
+}
+
+@media (min-width: 992px) {
+    .login-box {
+        width: 550px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .login-page {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        align-content: center;
+        background-image: url('../../assets/login/spot-desktop.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .login-image-wolf {
+        display: flex;
+        height: 70%;
+        width: auto;
+    }
+
+    .login-box {
+        width: 600px;
+        max-width: unset;
+        margin-right: 150px;
+
+    }
+
+    .login-label {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .login-input-text {
+        width: 400px;
+        height: 45px;
+        border-radius: 30px;
+        margin-top: 5px;
+    }
+
+    .login-esqueceu-senha {
+        font-size: 12px;
+    }
+
+    .login-form-button {
+        transform: translateY(50px);
+    }
+
+    .login-button {
+        width: 240px;
+        height: 60px;
+        border-radius: 20px;
+    }
+
+    .login-cadastro {
+        font-size: 14px;
+    }
+
+    .login-image-mobile {
+        display: none;
+    }
+
+    .login-image-desktop {
+        display: flex;
+        width: 450px;
+        position: absolute;
+        top: 30px;
+    }
+
+    .login-spot-mobile {
+        display: none;
+    }
+}
