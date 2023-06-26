@@ -15,7 +15,10 @@ function MainLayout({ children }: { children: ReactNode }) {
         <div className="main-layout">
             {isMenuOpen && <Menu setIsMenuOpen={setIsMenuOpen} />}
 
-            <div className="main-layout-content">
+            <div 
+                className="main-layout-content"
+                style={isMenuOpen ? { overflow: "hidden" } : undefined}
+            >
                 <div
                     className="mobile-header"
                     onClick={() => setIsMenuOpen(true)}

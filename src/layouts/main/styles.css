@@ -4,7 +4,7 @@
 }
 
 .main-layout-content {
-    min-height: 100vh;
+    height: 100vh;
 }
 
 .mobile-header {
@@ -27,6 +27,10 @@
 @media(min-width: 992px) {
     .main-layout {
         display: flex;
+    }
+
+    .main-layout-content {
+        flex: 1;
     }
 
     .mobile-header {

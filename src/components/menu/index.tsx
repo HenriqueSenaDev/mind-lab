@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import userPhoto from "../../assets/common/user-photo.png";
 import { ReactComponent as Logo} from "../../assets/common/logo.svg";
@@ -46,7 +46,7 @@ function Menu({ setIsMenuOpen }: IProps) {
         {
             label: "Aulas",
             icon: <LessonsIcon />,
-            path: "/lessons"
+            path: "/courses"
         },
         {
             label: "Desempenho",
@@ -74,6 +74,12 @@ function Menu({ setIsMenuOpen }: IProps) {
             path: "/personalization"
         },
     ]
+
+    useEffect(() => {
+        const path = window.location.pathname;
+        const activeNavItem = navItems.find(item => item.path === path);
+        setActivePage(activeNavItem?.label as string);
+    }, []);
 
     return (
         <div 
