@@ -14,14 +14,14 @@ import "./section-styles/showcase.css";
 // Our Courses section assets
 import { ReactComponent as CoursesLabelVector } from "../../assets/landing/our-courses/our-courses-label.svg";
 import ourCoursesWolfImg from "../../assets/landing/our-courses/our-courses-wolf.png";
-import planning from "../../assets/landing/our-courses/cards/planning.png";
-import design from "../../assets/landing/our-courses/cards/design.png";
-import programming from "../../assets/landing/our-courses/cards/programming.png";
-import frontend from "../../assets/landing/our-courses/cards/frontend.png";
-import backend from "../../assets/landing/our-courses/cards/backend.png";
-import pixelArt from "../../assets/landing/our-courses/cards/pixel-art.png";
-import scratch from "../../assets/landing/our-courses/cards/scratch.png";
-import cientificMetodology from "../../assets/landing/our-courses/cards/cientific-metodology.png";
+import planning from "../../assets/common/course-cards/planning.png";
+import design from "../../assets/common/course-cards/design.png";
+import programming from "../../assets/common/course-cards/programming.png";
+import frontend from "../../assets/common/course-cards/frontend.png";
+import backend from "../../assets/common/course-cards/backend.png";
+import pixelArt from "../../assets/common/course-cards/pixel-art.png";
+import scratch from "../../assets/common/course-cards/scratch.png";
+import cientificMetodology from "../../assets/common/course-cards/cientific-metodology.png";
 import "./section-styles/our-courses.css";
 // Multimodals section assets
 import { ReactComponent as MultimodalsLabel } from "../../assets/landing/multimodals/multimodals-label.svg";
