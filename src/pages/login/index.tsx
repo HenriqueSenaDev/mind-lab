@@ -1,5 +1,3 @@
-import { useState } from "react";
-import "./styles.css";
 import ImageMobile from "../../assets/login/login-image-mobile.png";
 import ImageDesktop from "../../assets/login/login-image-desktop.png";
 import ImageWolf from "../../assets/login/wolf-image.png"
@@ -8,6 +6,7 @@ import Spot02 from "../../assets/login/blue02.png";
 import Spot03 from "../../assets/login/orange03.png";
 import Spot04 from "../../assets/login/orange04.png";
 import Spot05 from "../../assets/login/blue05.png";
+import "./styles.css";
 
 function Login() {
     return (

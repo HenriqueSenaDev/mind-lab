@@ -79,6 +79,7 @@ import contactWolfImg from "../../assets/landing/contact/contact-wolf.png";
 import bluredHearts from "../../assets/landing/contact/blured-hearts.png";
 import contactHearts from "../../assets/landing/contact/contact-hearts.png";
 import "./section-styles/contact.css";
+import { useNavigate } from "react-router";
 
 function Landing() {
   const [isDesktop, setIsDesktop] = useState<boolean>(
@@ -86,6 +87,8 @@ function Landing() {
   );
   const [courseCardIndex, setCourseCardIndex] = useState<number>(0);
   const [faqItemIndex, setFaqItemIndex] = useState<number>(0);
+
+  const navigate = useNavigate();
 
   const coursesCards = [
     <CourseCard imgSrc={planning} moduleTitle="Planejamento" />,
@@ -157,7 +160,12 @@ function Landing() {
     <div className="landing-container">
       {/* Showcase */}
       <section className="showcase">
-        <button className="login-button">Login</button>
+        <button 
+          className="showcase-login-button"
+          onClick={() => navigate("/login")}
+        >
+          Login
+        </button>
 
         <div className="showcase-description">
           <img className="showcase-logo" src={showcaseLogo} alt="mindlab logo" />
@@ -185,7 +193,12 @@ function Landing() {
         </div>
 
         <div className="sign-up-wrapper">
-          <button className="sign-up-button">INSCREVA-SE AGORA!</button>
+          <button 
+            className="sign-up-button"
+            onClick={() => navigate("/login")}
+          >
+              INSCREVA-SE AGORA!
+            </button>
         </div>
       </section>
 

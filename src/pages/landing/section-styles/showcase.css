@@ -19,7 +19,7 @@
     background-color: #f0eeee;
 }
 
-.login-button {
+.showcase-login-button {
     position: absolute;
     top: 20px;
     right: 22px;
@@ -28,7 +28,7 @@
     background-color: #FBFBFB;
 }
 
-.login-button,
+.showcase-login-button,
 .sign-up-button {
     padding: 5px 27px;
     border-radius: 10px;
@@ -272,7 +272,7 @@
         margin-bottom: 0;
     }
 
-    .login-button {
+    .showcase-login-button {
         font-size: 1.05rem;
         padding: 6px 27px;
         backdrop-filter: blur(20px);

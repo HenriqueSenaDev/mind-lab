@@ -1,10 +1,9 @@
 import './App.css';
-import Landing from './pages/landing';
-import Login from './pages/login'
+import AppRoutes from './routes';
 
 function App() {
   return (
-    <Login />
+    <AppRoutes />
   );
 }
 
