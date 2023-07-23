@@ -75,10 +75,9 @@
 
 .join-us-button {
     font-family: 'Inter';
-    padding: 5px 27px;
+    padding: 7px 18px;
     border-radius: 10px;
     font-size: 10px;
-    background-color: transparent;
     font-weight: 800;
     color: #0093CE;
     outline: none;
@@ -87,6 +86,7 @@
     cursor: pointer;
     transition: all ease 0.2s;
     z-index: 1;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.70) 0%, rgba(255, 255, 255, 0.70) 100%), linear-gradient(136deg, rgba(245, 147, 86, 0.80) 0%, rgba(144, 211, 237, 0.80) 100%);
 }
 
 .join-us-button:hover {
@@ -301,7 +301,7 @@
     }
 
     .join-us-button {
-        padding: 12px 27px;
+        padding: 14px 32px;
         font-size: 28px;
         letter-spacing: 2px;
         border-radius: 18px;

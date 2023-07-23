@@ -106,3 +106,13 @@
         align-self: center;
     }
 }
+
+@media(min-width: 1920px) {
+    .multimodals-area {
+        width: 75%;
+    }
+    .mm-wolf-img {
+        width: 25%;
+        top: 0px;
+    }
+}
