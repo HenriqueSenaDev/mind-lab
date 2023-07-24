@@ -3,11 +3,14 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 50%;
+    width: 80px;
+    height: 80px;
+    padding: 10px 5px;
+    border-radius: 20px;
     gap: 5px;
-    margin: 10px 0;
     color: #535353;
     position: relative;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.10);
 }
 
 .multimodal-item-container p {
@@ -15,7 +18,7 @@
 }
 
 .multimodal-item-icon {
-    width: 35px;
+    width: 33px;
     height: auto;
 }
 
@@ -25,7 +28,8 @@
 
 @media(min-width: 400px) {
     .multimodal-item-container {
-        margin: 12px 0;
+        width: 100px;
+        height: 100px;
     }
 
     .multimodal-item-icon {
@@ -37,9 +41,16 @@
     }
 }
 
+@media(min-width: 650px) {
+    .multimodal-item-container {
+        width: 115px;
+    }
+}
+
 @media(min-width: 768px) {
     .multimodal-item-container {
-        margin: 18px 0;
+        width: 140px;
+        height: 120px;
     }
 
     .multimodal-item-icon {
@@ -53,14 +64,15 @@
 
 @media(min-width: 992px) {
     .multimodal-item-container {
-        margin: 32px 0;
+        padding: 18px 25px;
+        width: unset;
+        height: unset;
         gap: 13px;
     }
 
     .multimodal-item-container p {
         display: block;
         text-align: justify;
-        width: 80%;
         font-size: 16px;
         letter-spacing: 2px;
     }
@@ -82,8 +94,8 @@
     }
 
     .multimodal-item-container:nth-child(2) .multimodal-item-icon {
-        bottom: -70px;
-        right: 15px;
+        bottom: -40px;
+        right: 0;
         rotate: -8deg;
     }
 
@@ -95,18 +107,28 @@
 
     .multimodal-item-container:nth-child(4) .multimodal-item-icon {
         top: -15px;
-        left: 20px;
+        left: 10px;
         rotate: 8deg;
     }
 
     .multimodal-item-container:nth-child(5) .multimodal-item-icon {
-        bottom: -72px;
-        left: 15px;
+        bottom: -42px;
+        left: -15px;
     }
 
     .multimodal-item-container:nth-child(6) .multimodal-item-icon {
         bottom: -50px;
         right: 15px;
         rotate: 8deg;
+    }
+}
+
+@media(min-width: 1600px) {
+    .multimodal-item-label {
+        height: 56px;
+    }
+
+    .multimodal-item-container p {
+        font-size: 20px;
     }
 }
