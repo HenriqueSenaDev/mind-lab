@@ -22,6 +22,7 @@
     height: 587px;
     width: 100%;
     margin: 10%;
+    padding-bottom: 15px;
     border-radius: 30px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
 }
@@ -36,6 +37,7 @@
 }
 
 .login-label {
+    font-weight: 500;
     color: rgba(0, 147, 206, 1);
     font-size: 13px;
     margin-left: 15px;
@@ -48,6 +50,9 @@
     border: none;
     color: rgba(0, 147, 206, 1);
     box-shadow: 0px 0px 44px rgba(0, 0, 0, 0.1);
+    outline: none;
+    padding: 0 18px;
+    font-size: 14px;
 }
 
 .login-form-usuario {
@@ -55,7 +60,7 @@
 }
 
 .login-esqueceu-senha {
-    font-size: 9px;
+    font-size: 12px;
     color: rgba(0, 147, 206, 0.7);
     margin-left: 15px;
     text-decoration: underline;
@@ -89,7 +94,7 @@
 }
 
 .login-cadastro {
-    font-size: 8px;
+    font-size: 12px;
     color: rgba(0, 147, 206, 1);
     font-weight: bold;
     text-align: center;
@@ -168,6 +173,10 @@ form {
     .login-box {
         width: 550px;
     }
+
+    .login-input-text {
+        font-size: 16px;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -197,7 +206,6 @@ form {
 
     .login-label {
         font-size: 16px;
-        font-weight: 500;
     }
 
     .login-input-text {
@@ -208,7 +216,7 @@ form {
     }
 
     .login-esqueceu-senha {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .login-form-button {
@@ -217,12 +225,12 @@ form {
 
     .login-button {
         width: 240px;
-        height: 60px;
+        height: 58px;
         border-radius: 20px;
     }
 
     .login-cadastro {
-        font-size: 14px;
+        font-size: 15px;
     }
 
     .login-image-mobile {
