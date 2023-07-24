@@ -1,23 +1,31 @@
 .courses {
     background: url("../../assets/courses/background.svg") no-repeat 35% center/cover;
+    height: calc(100% - 70px);
+    max-height: calc(100% - 70px);;
 }
 
-.courses-blur-wrapper {
-    width: 100%;
-    min-height: 100%;
+.courses-blur {
+    height: 100%;
+    max-height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    overflow: hidden;
+}
+
+.courses-wrapper {
+    max-height: 100%;
+    padding: 20px 25px 30px 25px;
     display: flex;
+    align-items: center;
     flex-direction: column;
     gap: 20px;
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 20px 25px 30px 25px;
-    align-items: center;
-    justify-content: center;
+    overflow: scroll;
 }
 
 .course-item {
     border-radius: 30px;
     overflow: hidden;
     width: 100%;
+    min-height: 130px;
     max-width: 300px;
     position: relative;
     aspect-ratio: 14/6.5;
@@ -45,43 +53,79 @@
 
 
 @media(min-width: 576px) {
-    .courses-blur-wrapper {
+    .courses-wrapper {
         gap: 24px;
     }
 
     .course-item {
         max-width: 360px;
+        min-height: 170px;
     }
 }
 
 @media(min-width: 768px) {
-    .courses-blur-wrapper {
+    .courses-wrapper {
         gap: 32px;
     }
 
     .course-item {
         max-width: 400px;
+        min-height: 190px;
     }
 }
 
 @media(min-width: 992px) {
-    .courses-blur-wrapper {
+    .courses {
+        height: 100%;
+        max-height: unset;
+    }
+
+    .courses-blur {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .courses-wrapper {
+        width: 100%;
+        max-width: 950px;
+        height: 100%;
+        max-height: 600px;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 30px;
         height: 100vh;
-        padding: 60px;
+        overflow: auto;
     }
 
     .course-item {
-        height: 90%;
-        max-width: 200px;
         aspect-ratio: unset;
     }
 }
 
-@media(min-width: 1200px) {
-    .courses-blur-wrapper {
-        padding: 100px;
+@media(min-width: 1400px) {
+    .courses-wrapper {
+        max-width: 1100px;
+        max-height: 700px;
+    }
+}
+
+@media(min-width: 1600px) {
+    .courses-wrapper {
+        gap: 0;
+        row-gap: 40px;
+        column-gap: 60px;
+        max-width: 1200px;
+        max-height: 700px;
+    }
+}
+
+@media(min-width: 1900px) {
+    .courses-wrapper {
+        gap: 0;
+        row-gap: 40px;
+        column-gap: 60px;
+        max-width: 1300px;
+        max-height: 800px;
     }
 }

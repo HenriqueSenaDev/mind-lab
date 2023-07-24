@@ -54,17 +54,19 @@ function Courses() {
 
     return (
         <div className="courses">
-            <div className="courses-blur-wrapper">
-                {courseItems.map(({ imgSrc, path }) => (
-                    <div 
-                        className="course-item"
-                        onClick={() => navigate(`/courses${path}`)}
-                    >
-                        <div className="course-item-blur" />
+            <div className="courses-blur">
+                <div className="courses-wrapper">
+                    {courseItems.map(({ imgSrc, path }) => (
+                        <div 
+                            className="course-item"
+                            onClick={() => navigate(`/courses${path}`)}
+                        >
+                            <div className="course-item-blur" />
 
-                        <img src={imgSrc} alt={path} />
-                    </div>
-                ))}
+                            <img src={imgSrc} alt={path} />
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     );
