@@ -5,18 +5,22 @@ import Login from "./pages/login";
 import Courses from "./pages/courses";
 
 function AppRoutes() {
+    function onMainLayout(element: React.ReactNode) {
+        return <MainLayout children={element} />;
+    }
+
     return (
         <Router>
             <Routes>
                 <Route path="/" element={<Landing />} />
                 <Route path="/login" element={<Login />} />
-                <Route path="/home" element={<MainLayout children={<h1>MindLab home page</h1>} />} />
-                <Route path="/courses" element={<MainLayout children={<Courses />} />} />
-                <Route path="/performance" element={<MainLayout children={<h1>MindLab performance page</h1>} />} />
-                <Route path="/materials" element={<MainLayout children={<h1>MindLab materials page</h1>} />} />
-                <Route path="/forums" element={<MainLayout children={<h1>MindLab forums page</h1>} />} />
-                <Route path="/achievements" element={<MainLayout children={<h1>MindLab achievements page</h1>} />} />
-                <Route path="/personalization" element={<MainLayout children={<h1>MindLab personalization page</h1>} />} />
+                <Route path="/home" element={onMainLayout(<h1>MindLab home page</h1>)} />
+                <Route path="/courses" element={onMainLayout(<Courses />)} />
+                <Route path="/performance" element={onMainLayout(<h1>MindLab performance page</h1>)} />
+                <Route path="/materials" element={onMainLayout(<h1>MindLab materials page</h1>)} />
+                <Route path="/forums" element={onMainLayout(<h1>MindLab forums page</h1>)} />
+                <Route path="/achievements" element={onMainLayout(<h1>MindLab achievements page</h1>)} />
+                <Route path="/personalization" element={onMainLayout(<h1>MindLab personalization page</h1>)} />
             </Routes>
         </Router>
     );
