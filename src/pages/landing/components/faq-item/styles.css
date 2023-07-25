@@ -88,3 +88,17 @@
         line-height: 1.1;
     }
 }
+
+@media(min-width: 1900px) {
+    .faq-item-card {
+        max-width: 300px;
+    }
+
+    .faq-item-question {
+        font-size: 18px;
+    }
+
+    .faq-item-card p {
+        font-size: 17px;
+    }
+}

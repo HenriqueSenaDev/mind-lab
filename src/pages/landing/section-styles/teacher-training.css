@@ -330,3 +330,9 @@
         right: 25%;
     }
 }
+
+@media(min-width: 1900px) {
+    .teacher-training-content p {
+        font-size: 20px;
+    }
+}

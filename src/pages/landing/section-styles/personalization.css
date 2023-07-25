@@ -157,3 +157,9 @@
         transform: translateX(-5%);
     }
 }
+
+@media(min-width: 1900px) {
+    .personalization p {
+        font-size: 20px;
+    }
+}

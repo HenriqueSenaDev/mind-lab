@@ -172,16 +172,8 @@
     }
 }
 
-/* @media(min-width: 1400px) {
-    .progress-tracking {
-        margin-top: 25%;
-    }
-
-    .progress-tracking-label {
-        width: 110%;
-    }
-
+@media(min-width: 1900px) {
     .progress-container p {
-        width: 110%;
+        font-size: 20px;
     }
-} */
+}

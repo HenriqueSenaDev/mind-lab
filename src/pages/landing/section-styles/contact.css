@@ -239,3 +239,17 @@
         top: 85%;
     }
 }
+
+@media(min-width: 1900px) {
+    .contact-via:nth-of-type(1) {
+        font-size: 17px;
+    }
+
+    .contact-via:nth-of-type(2) {
+        font-size: 15px;
+    }
+
+    .contact-via:nth-of-type(3) {
+        font-size: 16px;
+    }
+}
