@@ -109,7 +109,10 @@ function Menu({ setIsMenuOpen }: IProps) {
                     ))}
                 </nav>
 
-                <div className="menu-logout">
+                <div 
+                    className="menu-logout"
+                    onClick={() => navigate("/")}
+                >
                     <LogOutIcon />
 
                     <span>Sair</span>

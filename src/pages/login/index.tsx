@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import ImageMobile from "../../assets/login/login-image-mobile.png";
 import ImageDesktop from "../../assets/login/login-image-desktop.png";
 import ImageWolf from "../../assets/login/wolf-image.png"
@@ -9,6 +10,8 @@ import Spot05 from "../../assets/login/blue05.png";
 import "./styles.css";
 
 function Login() {
+    const navigate = useNavigate();
+
     return (
         <div className="login-page">
 
@@ -29,7 +32,12 @@ function Login() {
                         <span className="login-esqueceu-senha">Equeceu sua senha?</span>
                     </div>
                     <div className="login-form-button">
-                        <input type="button" value="ENTRAR" className="login-button" />
+                        <input 
+                            type="button" 
+                            value="ENTRAR" 
+                            className="login-button" 
+                            onClick={() => navigate("/home")}
+                        />
                         <span className="login-cadastro">Não possui cadastro? Faça agora!</span>
                     </div>
                     

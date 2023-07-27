@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 @import url('https://fonts.cdnfonts.com/css/wild-wolf');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 
 * {
   margin: 0;
@@ -13,10 +12,19 @@ body {
 }
 
 :root {
+  /* Primary Color Hex */
   --primary-color: #0093CE;
+  /* Primary Color Rgb Values */
+  --pred: 0;
+  --pgreen: 147;
+  --pblue: 206;
+
+  /* Secondary Color Hex */
   --secondary-color: #F3701F;
-  /* --primary-color: purple;
-  --secondary-color: orange; */
+  /* Primary Color Rgb Values */
+  --sred: 243;
+  --sgreen: 112;
+  --sblue: 31;
 }
 
 .flex-center {
