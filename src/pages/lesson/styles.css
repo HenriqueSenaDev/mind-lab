@@ -1,0 +1,521 @@
+.lesson {
+    padding: 32px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.lesson-card {
+    width: 100%;
+    border-radius: 15px;
+    position: relative;
+    max-width: 340px;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+}
+
+.lesson-card-blur {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    opacity: 0.25;
+    border-radius: 16px;
+}
+
+.lesson-banner {
+    width: 100%;
+}
+
+.lesson-play-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: absolute;
+    left: 16px;
+    bottom: 12px;
+    padding: 9px 23px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    backdrop-filter: blur(7.5px);
+    background: linear-gradient(135deg, rgba(217, 217, 217, 0.50) 0%, rgba(var(--pred), var(--pgreen), var(--pblue), 0.50) 0.01%, rgba(var(--pred), var(--pgreen), var(--pblue), 0.35) 100%);
+    cursor: pointer;
+}
+
+.lesson-play-button span {
+    font-family: 'Inter';
+    letter-spacing: 1.44px;
+    color: #FFF;
+    font-weight: 800;
+    font-size: 12px;
+}
+
+.lesson-header {
+    width: 100%;
+    max-width: 340px;
+}
+
+.lesson-header h1 {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.lesson-header h1 strong {
+    font-weight: 800;
+}
+
+.lesson-teacher-section {
+    display: flex;
+    gap: 4px;
+}
+
+.teacher-photo {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.teacher-photo-blur {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    top: 0;
+    opacity: 0.2;
+}
+
+.teacher-photo img {
+    width: 100%;
+}
+
+.teacher-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.teacher-description {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.teacher-description span {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.teacher-name {
+    font-size: 12px;
+}
+
+.teacher-subject {
+    font-size: 10px;
+    opacity: 0.6;
+}
+
+.teacher-contact {
+    font-size: 8px;
+    color: #8f8d8d;
+}
+
+.lesson-actions-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0 12px;
+}
+
+.lesson-actions-buttons button {
+    font-family: 'Inter';
+    border-radius: 6px;
+    background-color: var(--primary-color);
+    font-size: 10px;
+    font-weight: 700;
+    color: #FFF;
+    padding: 7px 20px;
+    width: 50%;
+    max-width: 150px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0px 0px 80px 0px rgba(0, 0, 0, 0.15);
+    transition: all ease 0.2s;
+}
+
+.lesson-actions-buttons button:hover {
+    background-color: rgba(var(--pred), var(--pgreen), var(--pblue), 0.7);
+}
+
+.lesson-description {
+    text-align: justify;
+    color: var(--secondary-color);
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 120%;
+    max-width: 340px;
+}
+
+.lesson-topics {
+    width: 100%;
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.folks-and-arthur {
+    display: none;
+}
+
+@media(min-width: 400px) {
+    .lesson-card,
+    .lesson-header,
+    .lesson-actions-buttons,
+    .lesson-description,
+    .lesson-topics {
+        max-width: 390px;
+    }
+}
+
+@media(min-width: 500px) {
+    .lesson-play-button {
+        left: 22px;
+        bottom: 18px;
+    }
+
+    .lesson-header h1, 
+    .teacher-name {
+        font-size: 14px;
+    }
+
+    .lesson-teacher-section {
+        gap: 8px;
+    }
+
+    .teacher-photo {
+        width: 34px;
+        height: 34px;
+    }
+
+    .teacher-subject {
+        font-size: 12px;
+    }
+
+    .teacher-contact {
+        font-size: 11px;
+    }
+
+    .lesson-description {
+        font-size: 12px;
+        line-height: 130%;
+    }
+}
+
+@media(min-width: 600px) {
+    .lesson-card,
+    .lesson-header,
+    .lesson-actions-buttons,
+    .lesson-description,
+    .lesson-topics {
+        max-width: 440px;
+    }
+}
+
+@media(min-width: 768px) {
+    .lesson-card,
+    .lesson-header,
+    .lesson-actions-buttons,
+    .lesson-description,
+    .lesson-topics {
+        max-width: 490px;
+    }
+}
+
+@media(min-width: 850px) {
+    .lesson {
+        gap: 24px;
+    }
+
+    .lesson-play-button {
+        left: 22px;
+        bottom: 18px;
+    }
+
+    .lesson-header h1, 
+    .teacher-name {
+        font-size: 16px;
+    }
+
+    .lesson-teacher-section {
+        gap: 10px;
+    }
+
+    .teacher-photo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .teacher-subject {
+        font-size: 14px;
+    }
+
+    .teacher-contact {
+        font-size: 13px;
+    }
+
+    .lesson-description {
+        font-size: 14px;
+        line-height: 140%;
+    }
+}
+
+@media(min-width: 992px) {
+    .lesson {
+        padding: 32px 40px;
+        align-items: unset;
+    }
+    
+    .lesson-card {
+        max-width: unset;
+        aspect-ratio: 19/5.5;
+        overflow: hidden;
+    }
+
+    .lesson-card-blur {
+        z-index: 1;
+    }
+
+    .lesson-play-button {
+        padding: 12px 36px;
+        z-index: 2;
+    }
+
+    .lesson-play-button span {
+        font-size: 16px;
+    }
+
+    .lesson-banner {
+        transform: translateY(-30%);
+    }
+
+    .lesson-header {
+        display: flex;
+        max-width: unset;
+    }
+
+    .lesson-header h1 {
+        font-size: 19px;
+        flex: 1;
+    }
+
+    .lesson-teacher-section {
+        width: 280px;
+    }
+
+    .lesson-actions-buttons {
+        position: absolute;
+        right: 0;
+        width: 280px;
+        transform: translateX(-45px);
+        top: calc((100vw - 250px ) / 19 * 5.5 + 106px);
+        flex-direction: column;
+    }
+
+    .lesson-actions-buttons button {
+        width: 100%;
+        max-width: unset;
+        font-size: 13px;
+        padding: 10px 14px;
+        z-index: 1;
+    }
+
+    .lesson-description,
+    .lesson-topics {
+        width: calc(100% - 310px);
+        max-width: unset;
+        transform: translateY(-20px);
+    }
+
+    .lesson-description {
+        line-height: 120%;
+    }
+
+    .folks-and-arthur {
+        position: absolute;
+        display: unset;
+        width: 350px;
+        right: -40px;
+        transform: translateY(160px);
+    }
+}
+
+@media(min-width: 1280px) {
+    .lesson-topics {
+        gap: 16px;
+    }
+
+    .lesson-header h1 {
+        font-size: 21px;
+    }
+
+    .lesson-description {
+        font-size: 15px;
+    }
+}
+
+@media(min-width: 1440px) {
+    .lesson-header h1 {
+        font-size: 22px;
+    }
+
+    .teacher-photo {
+        width: 45px;
+        height: 45px;
+    }
+
+    .teacher-name {
+        font-size: 18px;
+    }
+
+    .teacher-subject {
+        font-size: 16px;
+    }
+
+    .teacher-contact {
+        font-size: 14px;
+    }
+
+    .lesson-description {
+        font-size: 16px;
+    }
+
+    .lesson-teacher-section,
+    .lesson-actions-buttons {
+        width: 350px;
+    }
+
+    .lesson-actions-buttons {
+        transform: translateX(-50px);
+        top: calc((100vw - 250px ) / 19 * 5.5 + 116px);
+    }
+
+    .lesson-actions-buttons button {
+        font-size: 15.5px;
+        padding: 13px;
+    }
+
+    .lesson-description,
+    .lesson-topics {
+        width: calc(100% - 390px);
+    }
+
+    .folks-and-arthur {
+        width: 390px;
+        right: -30px;
+        transform: translateY(180px);
+    }
+}
+
+@media(min-width: 1600px) {
+    .lesson {
+        padding: 40px 60px;
+    }
+
+    .lesson-header h1 {
+        font-size: 24px;
+    }
+
+    .teacher-photo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .teacher-name {
+        font-size: 19px;
+    }
+
+    .teacher-subject {
+        font-size: 18px;
+    }
+
+    .teacher-contact {
+        font-size: 16px;
+    }
+
+    .lesson-description {
+        font-size: 17px;
+    }
+
+    .lesson-actions-buttons {
+        transform: translateX(-60px);
+    }
+    
+    .lesson-actions-buttons button {
+        font-size: 16px;
+        padding: 14px;
+    }
+
+    .folks-and-arthur {
+        width: 420px;
+        right: -40px;
+        transform: translateY(190px);
+    }
+}
+
+@media(min-width: 1900px) {
+    .lesson {
+        gap: 28px;
+    }
+
+    .lesson-header h1 {
+        font-size: 28px;
+        transform: translateY(8px);
+    }
+
+    .lesson-teacher-section,
+    .lesson-actions-buttons {
+        width: 410px;
+    }
+    .teacher-photo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .teacher-name {
+        font-size: 22px;
+    }
+
+    .teacher-subject {
+        font-size: 20px;
+    }
+
+    .lesson-description, 
+    .lesson-topics {
+        width: calc(100% - 450px);
+    }
+
+    .lesson-actions-buttons {
+        top: calc((100vw - 250px ) / 19 * 5.5 + 132px);
+    }
+
+    .lesson-description {
+        font-size: 19px;
+        line-height: 130%;
+    }
+
+    .folks-and-arthur {
+        width: 510px;
+        right: -60px;
+        transform: translateY(220px);
+    }
+}

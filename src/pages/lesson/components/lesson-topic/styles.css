@@ -1,0 +1,105 @@
+.lesson-topic {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.topic-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.topic-header span {
+    font-size: 12px;
+    color: var(--primary-color);
+}
+
+.topic-title {
+    font-weight: 500;
+    opacity: 0.7;
+}
+
+.opened-topic {
+    font-weight: 700;
+    opacity: 0.9;
+}
+
+.topic-description {
+    font-size: 10px;
+    color: var(--secondary-color);
+    line-height: 120%;
+    text-align: justify;
+}
+
+.revert-topic-arrow {
+    rotate: 180deg;
+}
+
+@media(min-width: 500px) {
+    .topic-header span {
+        font-size: 13.5px;
+    }
+
+    .topic-description {
+        font-size: 12px;
+    }
+}
+
+@media(min-width: 850px) {
+    .topic-header span {
+        font-size: 15px;
+    }
+
+    .topic-description {
+        font-size: 13px;
+    }
+}
+
+@media(min-width: 1280px) {
+    .topic-header span {
+        font-size: 16px;
+        letter-spacing: 0.5px;
+    }
+
+    .topic-arrow {
+        width: 11px;
+        height: auto;
+    }
+
+    .topic-description {
+        font-size: 14px;
+    }
+}
+
+@media(min-width: 1440px) {
+    .topic-header span {
+        font-size: 18px;
+    }
+
+    .topic-description {
+        font-size: 16px;
+    }
+}
+
+@media(min-width: 1600px) {
+    .topic-header span {
+        font-size: 19px;
+    }
+
+    .topic-description {
+        font-size: 18px;
+    }
+}
+
+@media(min-width: 1900px) {
+    .topic-header span {
+        font-size: 20px;
+    }
+
+    .topic-description {
+        font-size: 19px;
+    }
+}
+
