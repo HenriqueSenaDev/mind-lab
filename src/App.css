@@ -35,8 +35,10 @@ body {
 
 .primary-color {
   fill: var(--primary-color);
+  stroke: var(--primary-color);
 }
 
 .secondary-color {
   fill: var(--secondary-color);
+  stroke: var(--secondary-color);
 }
