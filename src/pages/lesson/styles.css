@@ -114,16 +114,16 @@
 }
 
 .teacher-name {
-    font-size: 12px;
+    font-size: 12.5px;
 }
 
 .teacher-subject {
-    font-size: 10px;
+    font-size: 11px;
     opacity: 0.6;
 }
 
 .teacher-contact {
-    font-size: 8px;
+    font-size: 10px;
     color: #8f8d8d;
 }
 
@@ -159,7 +159,7 @@
 .lesson-description {
     text-align: justify;
     color: var(--secondary-color);
-    font-size: 11px;
+    font-size: 11.5px;
     font-weight: 600;
     line-height: 120%;
     max-width: 340px;
