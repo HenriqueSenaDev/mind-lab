@@ -12,7 +12,7 @@
 }
 
 .topic-header span {
-    font-size: 12px;
+    font-size: 13px;
     color: var(--primary-color);
 }
 
@@ -27,7 +27,8 @@
 }
 
 .topic-description {
-    font-size: 11px;
+    font-size: 12.5px;
+    font-weight: 500;
     color: var(--secondary-color);
     line-height: 120%;
     text-align: justify;
@@ -43,17 +44,13 @@
     }
 
     .topic-description {
-        font-size: 12px;
+        font-size: 13px;
     }
 }
 
-@media(min-width: 850px) {
+@media(min-width: 768px) {
     .topic-header span {
         font-size: 15px;
-    }
-
-    .topic-description {
-        font-size: 13px;
     }
 }
 

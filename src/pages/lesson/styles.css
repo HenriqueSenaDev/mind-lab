@@ -60,7 +60,7 @@
 }
 
 .lesson-header h1 {
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 600;
     letter-spacing: 0.2px;
     margin-bottom: 15px;
@@ -77,8 +77,8 @@
 }
 
 .teacher-photo {
-    width: 26px;
-    height: 26px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     overflow: hidden;
     position: relative;
@@ -114,16 +114,16 @@
 }
 
 .teacher-name {
-    font-size: 12.5px;
+    font-size: 13px;
 }
 
 .teacher-subject {
-    font-size: 11px;
+    font-size: 12px;
     opacity: 0.6;
 }
 
 .teacher-contact {
-    font-size: 10px;
+    font-size: 11px;
     color: #8f8d8d;
 }
 
@@ -159,7 +159,7 @@
 .lesson-description {
     text-align: justify;
     color: var(--secondary-color);
-    font-size: 11.5px;
+    font-size: 13px;
     font-weight: 600;
     line-height: 120%;
     max-width: 340px;
@@ -177,6 +177,12 @@
     display: none;
 }
 
+@media(min-width: 360px) {
+    .lesson-actions-buttons button {
+        font-size: 12px;
+    }
+}
+
 @media(min-width: 400px) {
     .lesson-card,
     .lesson-header,
@@ -188,12 +194,15 @@
 }
 
 @media(min-width: 500px) {
+    .lesson-header h1 {
+        font-size: 16px;
+    }
+
     .lesson-play-button {
         left: 22px;
         bottom: 18px;
     }
 
-    .lesson-header h1, 
     .teacher-name {
         font-size: 14px;
     }
@@ -208,15 +217,14 @@
     }
 
     .teacher-subject {
-        font-size: 12px;
+        font-size: 13px;
     }
 
     .teacher-contact {
-        font-size: 11px;
+        font-size: 12px;
     }
 
     .lesson-description {
-        font-size: 12px;
         line-height: 130%;
     }
 }
@@ -232,6 +240,24 @@
 }
 
 @media(min-width: 768px) {
+    .lesson-header h1, 
+    .teacher-name {
+        font-size: 17px;
+    }
+
+    .teacher-subject {
+        font-size: 14px;
+    }
+
+    .teacher-contact {
+        font-size: 13px;
+    }
+
+    .lesson-description {
+        font-size: 14px;
+        line-height: 140%;
+    }
+
     .lesson-card,
     .lesson-header,
     .lesson-actions-buttons,
@@ -251,11 +277,6 @@
         bottom: 18px;
     }
 
-    .lesson-header h1, 
-    .teacher-name {
-        font-size: 16px;
-    }
-
     .lesson-teacher-section {
         gap: 10px;
     }
@@ -263,19 +284,6 @@
     .teacher-photo {
         width: 40px;
         height: 40px;
-    }
-
-    .teacher-subject {
-        font-size: 14px;
-    }
-
-    .teacher-contact {
-        font-size: 13px;
-    }
-
-    .lesson-description {
-        font-size: 14px;
-        line-height: 140%;
     }
 }
 
