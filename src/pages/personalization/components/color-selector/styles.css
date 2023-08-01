@@ -1,0 +1,213 @@
+.color-selector {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all ease 0.2s;
+}
+
+.color-selector svg {
+  position: absolute;
+  height: auto;
+  cursor: pointer;
+}
+
+.out-circle svg {
+  width: 58px;
+}
+
+.color-selector svg:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.out-circle {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.out-sector-one {
+  top: 0%;
+  left: 46%;
+  rotate: 30deg;
+}
+
+.out-sector-two {
+  top: 9.5%;
+  right: 11%;
+  rotate: 60deg;
+}
+
+.out-sector-three {
+  bottom: 53%;
+  right: 0.5%;
+  rotate: 90deg;
+}
+
+.out-sector-four {
+  top: 46%;
+  right: 0.1%;
+  rotate: 120deg;
+}
+
+.out-sector-five {
+  bottom: 15.5%;
+  right: 9.6%;
+  rotate: 150deg;
+}
+
+.out-sector-six {
+  bottom: 5%;
+  left: 48.5%;
+  rotate: 180deg;
+}
+
+.out-sector-seven {
+  bottom: 4.4%;
+  right: 46.3%;
+  rotate: 210deg;
+}
+
+.out-sector-eight {
+  bottom: 14%;
+  left: 11%;  
+  rotate: 240deg;
+}
+
+.out-sector-nine {
+  top: 48.5%;
+  left: 1%;
+  rotate: 270deg;
+}
+
+.out-sector-ten {
+  bottom: 50.5%;
+  left: 0.2%;
+  rotate: 300deg;
+}
+
+.out-sector-eleven {
+  top: 11%;
+  left: 9.8%;
+  rotate: 329.5deg;
+}
+
+.out-sector-twelve {
+  top: 0.6%;
+  right: 48.7%;
+  rotate: 360deg;
+}
+
+.inner-circle {
+  position: relative;
+  border-radius: 50%;
+  width: calc(100% - 80px);
+  height: calc(100% - 80px);
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-52%);
+}
+
+.inner-circle svg {
+  width: 40px;
+}
+
+.inner-sector-one {
+  top: -1%;
+  left: 46%;
+  rotate: 30deg;
+}
+
+.inner-sector-two {
+  top: 9%;
+  right: 9%;
+  rotate: 60deg;
+}
+
+.inner-sector-three {
+  bottom: 51%;
+  right: -2%;
+  rotate: 90deg;
+}
+
+.inner-sector-four {
+  top: 46.5%;
+  right: -2.5%;
+  rotate: 120deg;
+}
+
+.inner-sector-five {
+  bottom: 13%;
+  right: 7%;
+  rotate: 150deg;
+}
+
+.inner-sector-six {
+  bottom: 2%;
+  left: 49%;
+  rotate: 180deg;
+}
+
+.inner-sector-seven {
+  bottom: 1.6%;
+  right: 46%;
+  rotate: 210deg;
+}
+
+.inner-sector-eight {
+  bottom: 12%;
+  left: 9%;
+  rotate: 240deg;
+}
+
+.inner-sector-nine {
+  top: 49.5%;
+  left: -1%;
+  rotate: 270deg;
+}
+
+.inner-sector-ten {
+  bottom: 49.8%;
+  left: -2%;
+  rotate: 300deg;
+}
+
+.inner-sector-eleven {
+  top: 10%;
+  left: 8%;
+  rotate: 330deg;
+}
+
+.inner-sector-twelve {
+  top: -0.5%;
+  right: 49%;
+  rotate: 360deg;
+}
+
+.active-sector {
+  transform: scale(1.1);
+  z-index: 2;
+}
+
+@media(min-width: 400px) {
+  .out-circle svg {
+    width: 68px;
+  }
+
+  .inner-circle {
+    width: calc(100% - 78px);
+    height: calc(100% - 78px);
+    transform: translateX(-50%) translateY(-52%);
+  }
+
+  .inner-circle svg {
+    width: 50px;
+  }
+
+  .active-sector {
+    transform: scale(1.05);
+  }
+}
