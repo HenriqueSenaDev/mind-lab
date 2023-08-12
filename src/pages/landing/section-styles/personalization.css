@@ -1,4 +1,4 @@
-.personalization {
+.personalization-section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,7 +12,7 @@
     height: auto;
 }
 
-.personalization p {
+.personalization-section p {
     width: 85%;
     text-align: justify;
     font-size: 12px;
@@ -22,7 +22,7 @@
     line-height: 1.2;
 }
 
-.personalization p span {
+.personalization-section p span {
     color: #0093CE;
     font-weight: 700;
 }
@@ -58,24 +58,24 @@
 }
 
 @media(min-width: 400px) {
-    .personalization {
+    .personalization-section {
         margin-bottom: 320px;
     }
 }
 
 @media(min-width: 500px) {
-    .personalization {
+    .personalization-section {
         margin-bottom: 360px;
     }
 }
 
 @media(min-width: 567px) {
-    .personalization {
+    .personalization-section {
         gap: 18px;
         margin-bottom: 65%;
     }
 
-    .personalization p {
+    .personalization-section p {
         font-size: 14px;
     }
 
@@ -94,7 +94,7 @@
 }
 
 @media(min-width: 768px) {
-    .personalization {
+    .personalization-section {
         margin-bottom: 55%;
     }
 
@@ -113,7 +113,7 @@
 }
 
 @media(min-width: 992px) {
-    .personalization {
+    .personalization-section {
         margin-bottom: 0;
     }
 
@@ -123,7 +123,7 @@
         transform: translateX(10%);
     }
 
-    .personalization p {
+    .personalization-section p {
         width: 95%;
         font-size: 18px;
     }
@@ -159,7 +159,7 @@
 }
 
 @media(min-width: 1900px) {
-    .personalization p {
+    .personalization-section p {
         font-size: 20px;
     }
 }

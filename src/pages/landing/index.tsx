@@ -245,7 +245,7 @@ function Landing() {
       </section>
 
       {/* Personalization */}
-      <section className="personalization">
+      <section className="personalization-section">
         <PersonalizationLabelVector className="personalization-label" />
 
         <p>
