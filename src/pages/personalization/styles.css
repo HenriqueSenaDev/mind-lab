@@ -156,21 +156,9 @@
   font-weight: 800;
 }
 
-.light-definition .color-sample {
-  background-color: #FBFBFB;
-}
-
-.dark-definition .color-sample {
-  background-color: #1F1F1F;
-}
-
-.light-definition h1,
-.dark-definition h1 {
-  color: #696969;
-}
-
 .theme-visualizer,
-.apply-theme {
+.apply-theme,
+.desktop-apply-theme {
   width: 100%;
   outline: none;
   border: none;
@@ -188,7 +176,8 @@
   letter-spacing: 0.9px;
 }
 
-.apply-theme {
+.apply-theme,
+.desktop-apply-theme {
   max-width: 185px;
   display: flex;
   align-items: center;
@@ -199,6 +188,12 @@
   background: linear-gradient(146deg, #CBCBCE 0%, #B0B0B3 100%);
   letter-spacing: 1px;
   color: #FFF;
+}
+
+.theme-demo-area,
+.bottom-wolf,
+.desktop-apply-theme {
+  display: none;
 }
 
 @media(min-width: 400px) {
@@ -265,5 +260,326 @@
 
   .secondary-bottom-shape {
     width: 380px;
+  }
+}
+
+@media(min-width: 1024px) {
+  .personalization {
+    flex-direction: row;
+    align-items: unset;
+    gap: 30px;
+    padding: 68px 20px;
+    min-height: 100vh;
+  }
+
+  .primary-top-shape {
+    width: 500px;
+    left: 90px;
+  }
+
+  .primary-bottom-shape {
+    width: 380px;
+    rotate: 15deg;
+    bottom: -95px;
+  }
+
+  .secondary-bottom-shape {
+    width: 410px;
+    left: unset;
+    right: 120px;
+    bottom: -160px;
+  }
+
+  .personalization-area {
+    width: 310px;
+    justify-content: center;
+  }
+
+  .theme-visualizer {
+    display: none;
+  }
+
+  .theme-demo-area {
+    display: unset;
+    position: relative;
+  }
+
+  .theme-demo-monitor {
+    width: 490px;
+  }
+
+  .demo-sample-container {
+    position: absolute;
+    width: 450px;
+    top: 25px;
+    left: 25px;
+    display: flex;
+    gap: 15px;
+  }
+
+  .demo-sample-container h1 {
+    color: var(--primary-color);
+    font-size: 10px;
+    margin-top: 10px;
+  }
+
+  .main-demo-area {
+    width: 65%;
+  }
+
+  .demo-lesson-thumbnail {
+    min-width: 100%;
+    height: 140px;
+    background: url(../../assets/personalization/demo/thumbnail.png) no-repeat center center/cover;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .demo-lesson-thumbnail::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    opacity: 0.3;
+  }
+
+  .demo-play-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 24px;
+    width: 90px;
+    gap: 10px;
+    position: absolute;
+    left: 15px;
+    top: 100px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    backdrop-filter: blur(7.5px);
+    background: linear-gradient(135deg, rgba(217, 217, 217, 0.50) 0%, rgba(var(--pred), var(--pgreen), var(--pblue), 0.50) 0.01%, rgba(var(--pred), var(--pgreen), var(--pblue), 0.35) 100%);
+  }
+
+  .demo-play-icon {
+    transform: translateX(-25px);
+    height: 12px;
+  }
+
+  .demo-lesson-cards {
+    display: flex;
+    margin-top: 10px;
+    gap: 5px;
+  }
+
+  .demo-lesson-card {
+    flex: 1;
+    height: 42px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    background: url(../../assets/personalization/demo/lesson-card.png) no-repeat center center/cover;
+  }
+
+  .demo-lesson-card::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    opacity: 0.3;
+  }
+
+  .demo-next-button {
+    padding: 0 6px;
+    background-color: var(--primary-color);
+    outline: none;
+    border: none;
+    border-radius: 4px;
+  }
+
+  .aside-demo-area {
+    width: 30%;
+    position: relative;
+  }
+
+  .demo-search-bar {
+    width: 100%;
+    height: 20px;
+    border-radius: 4px;
+    background-color: rgba(var(--pred), var(--pgreen), var(--pblue), 0.5);
+    position: relative;
+  }
+
+  .demo-search-icon {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 4px;
+    right: 10px;
+  }
+
+  .demo-categories {
+    width: 100%;
+    transform: translateY(-10px);
+  }
+
+  .demo-sample-wolf {
+    position: absolute;
+    width: 75%;
+    top: 50px;
+    left: 20px;
+  }
+
+  .bottom-wolf {
+    display: unset;
+    position: absolute;
+    width: 270px;
+    height: auto;
+    right: 50px;
+    bottom: 20px;
+  }
+}
+
+@media(min-width: 1280px) {
+  .personalization {
+    gap: 60px;
+  }
+
+  .bottom-wolf {
+    width: 290px;
+    right: 40px;
+  }
+
+  .apply-theme {
+    display: none;
+  }
+
+  .desktop-apply-theme {
+    position: absolute;
+    display: unset;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    font-size: 16px;
+    z-index: 1;
+    max-width: 210px;
+  }
+}
+
+@media(min-width: 1366px) {
+  .personalization {
+    gap: 80px;
+  }
+
+  .primary-top-shape {
+    width: 600px;
+    left: 30px;
+  }
+
+  .secondary-top-shape {
+    width: 440px;
+    top: -40px;
+  }
+
+  .primary-bottom-shape {
+    width: 400px;
+  }
+  
+  .secondary-bottom-shape {
+    width: 445px;
+    right: 170px;
+  }
+
+  .colors-selection-card, 
+  .colors-descriptor-container, 
+  .palete-explanation, 
+  .theme-visualizer {
+    width: 322px;
+  }
+
+  .colors-selection-card {
+    padding: 28px;
+    height: 322px;
+  }
+
+  .colors-descriptor-container,
+  .palete-explanation {
+    padding: 18px 22px;
+  }
+
+  .demo-sample-container {
+    width: 530px;
+    gap: 20px;
+    top: 35px;
+    left: 35px;
+  }
+
+  .theme-demo-monitor {
+    width: 600px;
+  }
+
+  .demo-lesson-thumbnail {
+    height: 180px;
+  }
+
+  .demo-play-button {
+    top: 140px;
+  }
+
+  .demo-sample-container h1 {
+    font-size: 12px;
+  }
+
+  .demo-lesson-cards {
+    gap: 6px;
+  }
+
+  .demo-lesson-card {
+    height: 52px;
+  }
+
+  .demo-next-button {
+    padding: 0 8px;
+  }
+
+  .aside-demo-area {
+    width: 35%;
+  }
+
+  .demo-search-bar {
+    height: 26px;
+  }
+
+  .demo-search-icon {
+    width: 14px;
+    height: 14px;
+    top: 6px;
+  }
+
+  .demo-sample-wolf {
+    top: 85px;
+  }
+
+  .bottom-wolf {
+    width: 310px;
+  }
+}
+
+@media(min-width: 1600px) {
+  .personalization {
+    align-items: center;
+  }
+
+  .theme-demo-area {
+    max-height: 600px;
+    transform: translateY(-50px);
+  }
+
+  .desktop-apply-theme {
+    bottom: -100px;
   }
 }
