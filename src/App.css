@@ -12,19 +12,27 @@ body {
 }
 
 :root {
-  /* Primary Color Hex */
+  /* Current Theme */
   --primary-color: #0093CE;
-  /* Primary Color Rgb Values */
   --pred: 0;
   --pgreen: 147;
   --pblue: 206;
 
-  /* Secondary Color Hex */
   --secondary-color: #F3701F;
-  /* Primary Color Rgb Values */
   --sred: 243;
   --sgreen: 112;
   --sblue: 31;
+
+  /* Test Theme */
+  --test-primary-color: #0093CE;
+  --test-pred: 0;
+  --test-pgreen: 147;
+  --test-pblue: 206;
+
+  --test-secondary-color: #F3701F;
+  --test-sred: 243;
+  --test-sgreen: 112;
+  --test-sblue: 31;
 }
 
 .flex-center {
@@ -41,4 +49,18 @@ body {
 .secondary-color {
   fill: var(--secondary-color);
   stroke: var(--secondary-color);
+}
+
+.test-primary-color {
+  fill: var(--test-primary-color);
+  stroke: var(--test-primary-color);
+}
+
+.test-secondary-color {
+  fill: var(--test-secondary-color);
+  stroke: var(--test-secondary-color);
+}
+
+.test-primary-color-no-fill {
+  stroke: var(--test-primary-color);
 }
