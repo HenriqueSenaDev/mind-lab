@@ -1,9 +1,12 @@
-import './App.css';
+import { ThemeContextProvider } from './context/theme-context';
 import AppRoutes from './routes';
+import './App.css';
 
 function App() {
   return (
-    <AppRoutes />
+    <ThemeContextProvider>
+      <AppRoutes />
+    </ThemeContextProvider>
   );
 }
 
