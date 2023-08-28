@@ -1,9 +1,11 @@
+import { useContext, useEffect } from "react";
+import { ThemeContext } from "../../context/theme-context";
 import { ReactComponent as PrimaryTopShape } from "../../assets/personalization/primary-top-shape.svg";
 import { ReactComponent as SecondaryTopShape } from "../../assets/personalization/secondary-top-shape.svg";
 import { ReactComponent as PrimaryBottomShape } from "../../assets/personalization/primary-bottom-shape.svg";
 import { ReactComponent as SecondaryBottomShape } from "../../assets/personalization/secondary-bottom-shape.svg";
 import { ReactComponent as CheckIcon } from "../../assets/personalization/check.svg";
-import { ReactComponent as PlayButtonIcon } from "../../assets/lesson/play.svg";
+import { ReactComponent as PlayButtonIcon } from "../../assets/personalization/demo/play.svg";
 import { ReactComponent as SearchIcon } from "../../assets/personalization/demo/search.svg";
 import { ReactComponent as DemoCategoriesIcon } from "../../assets/personalization/demo/categories.svg";
 import { ReactComponent as DemoSampleWolf } from "../../assets/personalization/demo/sample-wolf.svg";
@@ -14,6 +16,25 @@ import ColorSelector from "./components/color-selector";
 import "./styles.css";
 
 function Personalization() {
+  const { setCurrentTheme, testTheme, colorToChange, setColorToChange } = useContext(ThemeContext);
+
+  function visualizeMobileTestTheme() {
+    setCurrentTheme(testTheme);
+  }
+
+  function applyTheme() {
+    setCurrentTheme(testTheme);
+    localStorage.setItem("defaultTheme", JSON.stringify(testTheme));
+  }
+
+  // componentWillUnmount 
+  useEffect(() => {
+    return () => {
+      const defaultTheme = JSON.parse(localStorage.getItem("defaultTheme") as string);
+      setCurrentTheme(defaultTheme);
+    }
+  }, []);
+
   return (
     <div className="personalization">
       <PrimaryTopShape className="primary-top-shape" />
@@ -28,7 +49,11 @@ function Personalization() {
         </div>
 
         <div className="colors-descriptor-container">
-          <div className="color-descriptor">
+          <div 
+            className="color-descriptor"
+            onClick={() => setColorToChange("primary")}
+            style={ colorToChange == "primary" ? { backgroundColor: "#f2f2f2" } : {} }
+          >
             <h1 className="color-title">Cor Principal</h1>
 
             <div className="color-definition primary-definition">
@@ -37,12 +62,16 @@ function Personalization() {
               <div className="color-hex">
                 <span>Hexadecimal</span>
 
-                <h1>#0093CE</h1>
+                <h1>{testTheme.primaryColor.hex.toUpperCase()}</h1>
               </div>
             </div>
           </div>
 
-          <div className="color-descriptor">
+          <div 
+            className="color-descriptor"
+            onClick={() => setColorToChange("secondary")}
+            style={ colorToChange == "secondary" ? { backgroundColor: "#f5f5f5" } : {} }
+          >
             <h1 className="color-title">Cor Secundária</h1>
 
             <div className="color-definition secondary-definition">
@@ -51,7 +80,7 @@ function Personalization() {
               <div className="color-hex">
                 <span>Hexadecimal</span>
 
-                <h1>#F3701F</h1>
+                <h1>{testTheme.secondaryColor.hex.toUpperCase()}</h1>
               </div>
             </div>
           </div>
@@ -61,11 +90,17 @@ function Personalization() {
           <span>Descubra uma paleta de cores única: <strong>escolha a cor principal</strong> que define a essência da plataforma, e <strong>a cor secundária será a sua contrapartida complementar</strong>. Transforme sua experiência em algo verdadeiramente excepcional!</span>
         </div>
 
-        <button className="theme-visualizer">
+        <button 
+          className="mobile-theme-visualizer"
+          onClick={visualizeMobileTestTheme}
+        >
           VISUALIZAR ESCOLHA
         </button>
 
-        <button className="apply-theme">
+        <button 
+          className="apply-theme"
+          onClick={applyTheme}
+        >
           <CheckIcon className="check-icon" />
 
           APLICAR
@@ -114,7 +149,10 @@ function Personalization() {
           </div>
         </div>
 
-        <button className="desktop-apply-theme">
+        <button 
+          className="desktop-apply-theme"
+          onClick={applyTheme}
+        >
           <CheckIcon className="check-icon" />
 
           APLICAR
