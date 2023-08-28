@@ -106,7 +106,8 @@
 .menu-logout span {
     font-size: 12px;
     font-weight: 500;
-    color: #94C7F8;
+    color: var(--primary-color);
+    opacity: 0.8;
 }
 
 @media(min-width: 400px) {

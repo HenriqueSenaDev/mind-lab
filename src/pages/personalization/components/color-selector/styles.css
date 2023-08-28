@@ -16,11 +16,17 @@
 
 .out-circle svg {
   width: 58px;
+  transition: all ease 0.2s;
 }
 
-.color-selector svg:hover {
-  transform: scale(1.1);
-  z-index: 1;
+.out-circle svg:hover {
+  transform: scale(1.02);
+  z-index: 2;
+}
+
+.inner-circle svg:hover {
+  transform: scale(1.2);
+  z-index: 2;
 }
 
 .out-circle {
@@ -29,73 +35,73 @@
   position: relative;
 }
 
-.out-sector-one {
+.out-sector-1 {
   top: 0%;
   left: 46%;
   rotate: 30deg;
 }
 
-.out-sector-two {
+.out-sector-2 {
   top: 9.5%;
   right: 11%;
   rotate: 60deg;
 }
 
-.out-sector-three {
+.out-sector-3 {
   bottom: 53%;
   right: 0.5%;
   rotate: 90deg;
 }
 
-.out-sector-four {
+.out-sector-4 {
   top: 46%;
   right: 0.1%;
   rotate: 120deg;
 }
 
-.out-sector-five {
+.out-sector-5 {
   bottom: 15.5%;
   right: 9.6%;
   rotate: 150deg;
 }
 
-.out-sector-six {
+.out-sector-6 {
   bottom: 5%;
   left: 48.5%;
   rotate: 180deg;
 }
 
-.out-sector-seven {
+.out-sector-7 {
   bottom: 4.4%;
   right: 46.3%;
   rotate: 210deg;
 }
 
-.out-sector-eight {
+.out-sector-8 {
   bottom: 14%;
   left: 11%;  
   rotate: 240deg;
 }
 
-.out-sector-nine {
+.out-sector-9 {
   top: 48.5%;
   left: 1%;
   rotate: 270deg;
 }
 
-.out-sector-ten {
+.out-sector-10 {
   bottom: 50.5%;
   left: 0.2%;
   rotate: 300deg;
 }
 
-.out-sector-eleven {
+.out-sector-11 {
   top: 11%;
   left: 9.8%;
   rotate: 329.5deg;
 }
 
-.out-sector-twelve {
+.out-sector-12 {
   top: 0.6%;
   right: 48.7%;
   rotate: 360deg;
@@ -115,81 +121,81 @@
   width: 40px;
 }
 
-.inner-sector-one {
+.inner-sector-1 {
   top: -1%;
   left: 46%;
   rotate: 30deg;
 }
 
-.inner-sector-two {
+.inner-sector-2 {
   top: 9%;
   right: 9%;
   rotate: 60deg;
 }
 
-.inner-sector-three {
+.inner-sector-3 {
   bottom: 51%;
   right: -2%;
   rotate: 90deg;
 }
 
-.inner-sector-four {
+.inner-sector-4 {
   top: 46.5%;
   right: -2.5%;
   rotate: 120deg;
 }
 
-.inner-sector-five {
+.inner-sector-5 {
   bottom: 13%;
   right: 7%;
   rotate: 150deg;
 }
 
-.inner-sector-six {
+.inner-sector-6 {
   bottom: 2%;
   left: 49%;
   rotate: 180deg;
 }
 
-.inner-sector-seven {
+.inner-sector-7 {
   bottom: 1.6%;
   right: 46%;
   rotate: 210deg;
 }
 
-.inner-sector-eight {
+.inner-sector-8 {
   bottom: 12%;
   left: 9%;
   rotate: 240deg;
 }
 
-.inner-sector-nine {
+.inner-sector-9 {
   top: 49.5%;
   left: -1%;
   rotate: 270deg;
 }
 
-.inner-sector-ten {
+.inner-sector-10 {
   bottom: 49.8%;
   left: -2%;
   rotate: 300deg;
 }
 
-.inner-sector-eleven {
+.inner-sector-11 {
   top: 10%;
   left: 8%;
   rotate: 330deg;
 }
 
-.inner-sector-twelve {
+.inner-sector-12 {
   top: -0.5%;
   right: 49%;
   rotate: 360deg;
 }
 
 .active-sector {
-  transform: scale(1.1);
-  z-index: 2;
+  transform: scale(1.03);
+  z-index: 1;
 }
 
 @media(min-width: 400px) {
@@ -205,9 +211,5 @@
 
   .inner-circle svg {
     width: 50px;
-  }
-
-  .active-sector {
-    transform: scale(1.05);
   }
 }
