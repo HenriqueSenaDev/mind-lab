@@ -16,6 +16,13 @@
     overflow: hidden;
 }
 
+.video-wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(var(--pred), var(--pgreen), var(--pblue), 0.15);
+}
+
 .lesson-card-blur {
     position: absolute;
     width: 100%;

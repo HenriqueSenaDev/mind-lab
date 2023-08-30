@@ -1,9 +1,14 @@
+import { useState } from "react";
+import { DefaultUi, Player, Youtube, Captions } from "@vime/react";
 import { ReactComponent as PlayButtonIcon } from "../../assets/lesson/play.svg";
 import lessonBanner from "../../assets/lesson/lesson-banner.jpg";
 import teacherPhoto from "../../assets/lesson/teacher.png";
 import folksAndArthur from "../../assets/lesson/folks-and-arthur.png";
 import LessonTopic from "./components/lesson-topic";
+import "@vime/core/themes/default.css";
 import "./styles.css";
+
+
 
 export interface ILessonTopic {
     title: string;
@@ -11,6 +16,8 @@ export interface ILessonTopic {
 }
 
 function Lesson() {
+    const [isWatching, setIsWathicng] = useState<boolean>(false);
+
     const lessonTopicContents: ILessonTopic[] = [
         {
             title: 'Declaração de Bibliotecas',
@@ -45,19 +52,36 @@ function Lesson() {
     return (
         <div className="lesson">
             <div className="lesson-card">
-                <div className="lesson-card-blur" />
+                {isWatching ? 
+                    <div className="video-wrapper">
+                        <Player style={{ height: '100%', aspectRatio: "16/9" }} >
+                            <Youtube videoId={"S9uPNppGsGo"} key={"S9uPNppGsGo"} />
 
-                <img 
-                    className="lesson-banner"
-                    src={lessonBanner} 
-                    alt="lesson banner" 
-                />
-
-                <button className="lesson-play-button">
-                    <PlayButtonIcon className="play-icon" />
-
-                    <span>ASSISTIR</span>
-                </button>
+                            <DefaultUi noCaptions={false}>
+                                <Captions hidden={true} />
+                            </DefaultUi>
+                        </Player>
+                    </div>
+                    : 
+                    <>
+                        <div className="lesson-card-blur" />
+        
+                        <img 
+                            className="lesson-banner"
+                            src={lessonBanner} 
+                            alt="lesson banner" 
+                        />
+        
+                        <button 
+                            className="lesson-play-button"
+                            onClick={() => setIsWathicng(true)}
+                        >
+                            <PlayButtonIcon className="play-icon" />
+        
+                            <span>ASSISTIR</span>
+                        </button>
+                    </>
+                }
             </div>
 
             <div className="lesson-header">
