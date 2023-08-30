@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { ReactComponent as BackgroundShapes } from "../../assets/courses/background.svg";
 import planning from "../../assets/common/course-cards/planning.png";
 import design from "../../assets/common/course-cards/design.png";
 import programming from "../../assets/common/course-cards/programming.png";
@@ -54,6 +55,8 @@ function Courses() {
 
     return (
         <div className="courses">
+            <BackgroundShapes className="courses-background" />
+
             <div className="courses-blur">
                 <div className="courses-wrapper">
                     {courseItems.map(({ imgSrc, path }) => (

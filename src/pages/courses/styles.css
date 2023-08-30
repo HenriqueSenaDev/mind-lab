@@ -1,11 +1,25 @@
 .courses {
-    background: url("../../assets/courses/background.svg") no-repeat 35% center/cover;
     height: calc(100% - 70px);
-    max-height: calc(100% - 70px);;
+    max-height: calc(100% - 70px);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.courses-background {
+    width: 640px;
+    height: 600px;
+    rotate: 95deg;
+    transform: translateY(30px);
+    position: absolute;
+    z-index: -10;
 }
 
 .courses-blur {
     height: 100%;
+    width: 100%;
     max-height: 100%;
     background-color: rgba(255, 255, 255, 0.7);
     overflow: hidden;
@@ -13,7 +27,8 @@
 
 .courses-wrapper {
     max-height: 100%;
-    padding: 20px 25px 30px 25px;
+    margin: 20px 0;
+    padding: 0px 25px 30px 25px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -51,6 +66,12 @@
     height: 100%;
 }
 
+@media(min-width: 500px) {
+    .courses-background {
+        width: 800px;
+        transform: translateY(30px) translateX(70px);
+    }
+}
 
 @media(min-width: 576px) {
     .courses-wrapper {
@@ -63,7 +84,20 @@
     }
 }
 
+@media(min-width: 630px) {
+    .courses-background {
+        width: 950px;
+        transform: translateY(30px) translateX(120px);
+    }
+}
+
 @media(min-width: 768px) {
+    .courses-background {
+        margin: 40px 0;
+        width: 1000px;
+        transform: translateY(30px) translateX(140px);
+    }
+
     .courses-wrapper {
         gap: 32px;
     }
@@ -78,6 +112,11 @@
     .courses {
         height: 100%;
         max-height: unset;
+    }
+
+    .courses-background {
+        rotate: 0deg;
+        transform: translateY(5%);
     }
 
     .courses-blur {
@@ -103,7 +142,13 @@
     }
 }
 
-@media(min-width: 1400px) {
+@media(min-width: 1200px) {
+    .courses-background {
+        scale: 1.4;
+    }
+}
+
+@media(min-width: 1400px) { 
     .courses-wrapper {
         max-width: 1100px;
         max-height: 700px;
@@ -111,6 +156,10 @@
 }
 
 @media(min-width: 1600px) {
+    .courses-background {
+        scale: 1.5;
+    }
+
     .courses-wrapper {
         gap: 0;
         row-gap: 40px;
@@ -121,6 +170,10 @@
 }
 
 @media(min-width: 1900px) {
+    .courses-background {
+        scale: 1.7;
+    }
+
     .courses-wrapper {
         gap: 0;
         row-gap: 40px;
