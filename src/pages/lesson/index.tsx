@@ -55,7 +55,7 @@ function Lesson() {
                 {isWatching ? 
                     <div className="video-wrapper">
                         <Player style={{ height: '100%', aspectRatio: "16/9" }} >
-                            <Youtube videoId={"S9uPNppGsGo"} key={"S9uPNppGsGo"} />
+                            <Youtube videoId={"nYK45ITfQUY"} key={"nYK45ITfQUY"} />
 
                             <DefaultUi noCaptions={false}>
                                 <Captions hidden={true} />
