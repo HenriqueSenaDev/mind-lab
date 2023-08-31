@@ -1,0 +1,76 @@
+.filter-component {
+    display: flex;
+    flex-direction: column;
+    width: 306px;
+    height: 746px;
+    border-radius: 30px 0 0 30px;
+    margin-right: 40px;
+}
+
+.filter-component-input {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.filter-component-input input {
+    height: 46px;
+    width: 245px;
+    margin-top: 43px;
+    background-color: rgba(var(--pred), var(--pgreen), var(--pblue), 0.55);
+    color: #FFF;
+    text-decoration: none;
+    border-radius: 14px;
+    border: none;
+    padding-left: 19px;
+    margin-bottom: 34px;
+}
+
+.filter-component-input input::placeholder {
+    color: #FFF;
+}
+
+.filter-component-categories {
+    margin-left: 30px;
+    margin-right: 30px;
+    position: relative;
+}
+
+.filter-component-categories span {
+    color: var(--primary-color);
+    font-size: 18px;
+}
+
+.filter-component-options-container {
+    margin-top: 21px;
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-component-options-container span {
+    font-size: 10px;
+    font-weight: 600;
+    border: 2px solid var(--primary-color);
+    padding: 8px 17px;
+    border-radius: 21px;
+    cursor: pointer;
+}
+
+.filter-component-options-line {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 21px;
+}
+
+.filter-component-img-wolf {
+    width: 20%;
+    position: absolute;
+    bottom: -120px;
+}
+
+@media(min-height: 800px) {
+    .filter-component-img-wolf {
+        bottom: -40px;
+    }
+}
