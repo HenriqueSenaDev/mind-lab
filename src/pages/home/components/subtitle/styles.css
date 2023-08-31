@@ -1,0 +1,18 @@
+.subtitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.subtitle-box {
+    width: 24px;
+    height: 24px;
+    border-radius: 5px;
+}
+
+.subtitle span {
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
