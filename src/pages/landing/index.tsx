@@ -160,7 +160,7 @@ function Landing() {
     <div className="landing-container">
       {/* Showcase */}
       <section className="showcase">
-        <button 
+        <button
           className="showcase-login-button"
           onClick={() => navigate("/login")}
         >
@@ -193,12 +193,12 @@ function Landing() {
         </div>
 
         <div className="sign-up-wrapper">
-          <button 
+          <button
             className="sign-up-button"
             onClick={() => navigate("/login")}
           >
-              INSCREVA-SE AGORA!
-            </button>
+            INSCREVA-SE AGORA!
+          </button>
         </div>
       </section>
 
@@ -422,7 +422,7 @@ function Landing() {
           />
 
           <div className="join-us">
-            <button className="join-us-button">JUNTE-SE A NÓS!</button>
+            <button className="join-us-button">BAIXAR PDF</button>
 
             <PaintingIcon className="painting-icon" />
           </div>
@@ -440,7 +440,7 @@ function Landing() {
         <div className="contact-content">
           <div className="questions-area">
             <img className="contact-hearts" src={contactHearts} alt="blue hearts randomly" />
-              
+
             <div className="questions-area-header">
               <ContactLabelVector className="contact-label" />
 
