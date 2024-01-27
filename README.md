@@ -29,11 +29,10 @@ Construída a partir de princípios neurocientíficos para metodologias de ensin
 ![HomeColoured](https://github.com/HenriqueSenaDev/assets/blob/main/mind-lab/home-colored.png)
 
 ## Execute o projeto
-Pré-requisitos: 
-- NPM ou Yarn (package manager)
+Pré-requisito: NPM ou Yarn (package manager)
 
 ```bash
-git clone https://github.com/HenriqueSenaDev/presenter-web.git
+https://github.com/HenriqueSenaDev/mind-lab.git
 cd mind-lab
 npm install
 npm run dev
