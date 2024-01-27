@@ -6,6 +6,7 @@ import Courses from "./pages/courses";
 import Lesson from "./pages/lesson";
 import Personalization from "./pages/personalization";
 import Home from "./pages/home";
+import UnavailablePage from "./pages/unavailable";
 
 function AppRoutes() {
     function onMainLayout(element: React.ReactNode) {
@@ -20,10 +21,10 @@ function AppRoutes() {
                 <Route path="/home" element={onMainLayout(<Home />)} />
                 <Route path="/courses" element={onMainLayout(<Courses />)} />
                 <Route path="/courses/*" element={onMainLayout(<Lesson />)} />
-                <Route path="/performance" element={onMainLayout(<h1>Página indisponível</h1>)} />
-                <Route path="/materials" element={onMainLayout(<h1>Página indisponível</h1>)} />
-                <Route path="/forums" element={onMainLayout(<h1>Página indisponível</h1>)} />
-                <Route path="/achievements" element={onMainLayout(<h1>Página indisponível</h1>)} />
+                <Route path="/performance" element={onMainLayout(<UnavailablePage />)} />
+                <Route path="/materials" element={onMainLayout(<UnavailablePage />)} />
+                <Route path="/forums" element={onMainLayout(<UnavailablePage />)} />
+                <Route path="/achievements" element={onMainLayout(<UnavailablePage />)} />
                 <Route path="/personalization" element={onMainLayout(<Personalization />)} />
             </Routes>
         </Router>
