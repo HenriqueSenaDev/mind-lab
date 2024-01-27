@@ -1,4 +1,5 @@
-# Mind Lab
+# Mind Lab 
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/HenriqueSenaDev/mind-lab/blob/main/LICENSE)
 ![Static Badge](https://img.shields.io/badge/ViteJS-build?style=flat&logo=vite&logoColor=white&label=build&color=%23646CFF)
 ![Static Badge](https://img.shields.io/badge/TypeScript-build?style=flat&logo=typescript&logoColor=white&label=lang&color=%233178C6)
 ![Static Badge](https://img.shields.io/badge/React-build?style=flat&logo=react&logoColor=white&label=lib&color=%2361DAFB)
