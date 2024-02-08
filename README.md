@@ -33,7 +33,7 @@ Construída a partir de princípios neurocientíficos para metodologias de ensin
 Pré-requisito: NPM ou Yarn (package manager)
 
 ```bash
-https://github.com/HenriqueSenaDev/mind-lab.git
+git clone https://github.com/HenriqueSenaDev/mind-lab.git
 cd mind-lab
 npm install
 npm run dev
